@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 3: How to Balance Social and School Activities</title>
+    <link rel="stylesheet" href="plan3.css">
+</head>
+<body data-skill="speaking">
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" style="display: none;">
+        <div class="brand-section">
+            <span class="brand-title">Balance Plan 3</span>
+            <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-menu" id="skillsMenu">
+                <li class="nav-item active" data-skill="listening" id="nav-listening">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>🎧</span><span>1. Listening Skill</span></div>
+                        <span class="skill-status" id="status-listening"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="reading" id="nav-reading">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>📖</span><span>2. Reading Skill</span></div>
+                        <span class="skill-status" id="status-reading"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>💬</span><span>3. Speaking Skill</span></div>
+                        <span class="skill-status" id="status-speaking"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="writing" id="nav-writing">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>✍️</span><span>4. Writing Skill</span></div>
+                        <span class="skill-status" id="status-writing"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer"><p>Topic: How to Balance Social and School Activities</p></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan3hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 3
+            </span>
+        </div>
+        <header class="top-header">
+            <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+            <h1 class="lesson-title">How to Balance Social and School Activities</h1>
+        </header>
+
+        <section class="objectives-card">
+            <div class="objectives-grid">
+                <div class="objective-item">
+                    <h4>Specific Objective</h4>
+                    <p id="objectiveText">Students will be able to listen to an interview about school-life balance and interpret key suggestions for relaxation in pairs during a graphic organizer completion activity.</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Learning Outcomes</h4>
+                    <ul class="outcome-list" id="outcomesList">
+                        <li>Can describe the storyline of an audio or visual narrative about balancing school and personal life.</li>
+                        <li>Can comprehend extended discussions on strategies for learning to relax and maintaining well-being.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEPPER -->
+        <nav class="stage-navigation" id="stageNav">
+            <div class="stage-step active" data-stage="1"><div class="step-bubble">1</div><span class="step-label">Initial Activity</span></div>
+            <div class="stage-step" data-stage="2"><div class="step-bubble">2</div><span class="step-label">Presentation</span></div>
+            <div class="stage-step" data-stage="3"><div class="step-bubble">3</div><span class="step-label">Preparation</span></div>
+            <div class="stage-step" data-stage="4"><div class="step-bubble">4</div><span class="step-label">Execution</span></div>
+            <div class="stage-step" data-stage="5"><div class="step-bubble">5</div><span class="step-label">Evaluation</span></div>
+            <div class="stage-step" data-stage="6"><div class="step-bubble">6</div><span class="step-label">Reflection</span></div>
+        </nav>
+
+        <!-- ========== LISTENING ========== -->
+        
+<div id="speaking-section" class="skill-section">
+
+            <!-- S Stage 1 -->
+            <div id="speaking-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Speaking)</span><span class="stage-title">Chaotic Calendar Activity</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Look at this chaotic weekly calendar. Identify 3 problems. Then complete the sentence: "I have been studying all week." Answer what you have been doing.</p>
+                <div class="stage-content">
+                    <div class="chaotic-calendar">
+                        <div class="calendar-title">⚠️ Weekly Calendar – Overloaded!</div>
+                        <div class="calendar-items">
+                            <div class="calendar-item"><span class="calendar-time">Mon 7AM</span><span>Math exam + Football practice + Club meeting</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Tue 6AM</span><span>History project due + Science lab + Tutoring session</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Wed 7PM</span><span>Group presentation + Volunteering shift + Essay draft</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Thu 8AM</span><span>English quiz + Art contest + Parent meeting</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Fri ALL DAY</span><span>3 exams + Football tournament + Part-time job</span></div>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="s1-problems">Identify 3 problems with this schedule:</label>
+                        <textarea class="writing-textarea" id="s1-problems" style="height:100px;" placeholder="Problem 1: Too many events on Monday... Problem 2: ..."></textarea>
+                    </div>
+                    <div class="grammar-callout">
+                        <h5>Practice Sentence (Say it aloud):</h5>
+                        <div class="grammar-formula">"I have been studying all week."</div>
+                        <p style="margin-top:0.5rem; color:var(--text-secondary);">Now answer: "What have you been doing?" with 2 activities.</p>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s1-activities">My 2 activities this week (using have been + verb-ing):</label><input type="text" class="text-input" id="s1-activities" placeholder="I have been preparing for my math exam. I have been attending football practice."></div>
+                    <button class="btn-check-ans" onclick="checkSpeakingStage1()">Check Sentences</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 2 -->
+            <div id="speaking-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Speaking)</span><span class="stage-title">Model Dialogue – PPC</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Listen and read the model dialogue. Identify 2 examples of Present Perfect Continuous. Practice reading chorally in pairs.</p>
+                <div class="stage-content">
+                    <div class="dialogue-card">
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student A:</span><span class="dialogue-text">Hey, you look tired. What <strong>have you been doing</strong> lately?</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student B:</span><span class="dialogue-text">I know! I <strong>have been trying</strong> to balance football and my exams. It's really exhausting.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student A:</span><span class="dialogue-text">I understand. You might want to set aside one free afternoon each week. That could really help.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student B:</span><span class="dialogue-text">That sounds useful. I'll give it a try!</span></div>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s2-ppc1">Example 1 of Present Perfect Continuous from the dialogue:</label><input type="text" class="text-input" id="s2-ppc1" placeholder="e.g. have you been doing..."></div>
+                    <div class="question-item"><label class="question-label" for="s2-ppc2">Example 2 of Present Perfect Continuous from the dialogue:</label><input type="text" class="text-input" id="s2-ppc2" placeholder="e.g. have been trying..."></div>
+                    <button class="btn-check-ans" onclick="checkDialoguePPC()">Check Examples</button>
+                    <div class="grammar-callout" style="margin-top:1.5rem;">
+                        <h5>Phrases for Giving Suggestions:</h5>
+                        <ul class="grammar-samples">
+                            <li>"You <strong>might want to</strong>..."</li>
+                            <li>"That <strong>could</strong> really help."</li>
+                            <li>"Have you considered...?"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 3 -->
+            <div id="speaking-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Speaking)</span><span class="stage-title">Schedule Template & 3 Questions</span></div>
+                    <span class="stage-time">15 Min</span>
+                </div>
+                <p class="stage-instruction">Fill in your actual weekly commitments in the schedule. Then draft 3 questions using Present Perfect Continuous to ask your partner.</p>
+                <div class="stage-content">
+                    <h5 style="margin-bottom:1rem;">My Weekly Schedule (5 Time Slots):</h5>
+                    <table class="schedule-grid">
+                        <thead><tr><th>Time Slot</th><th>Activity</th><th>Hours/Week</th></tr></thead>
+                        <tbody>
+                            <tr><td>Morning (Mon-Fri)</td><td><input type="text" id="sch-1" placeholder="e.g. School classes..."></td><td><input type="text" id="sch-1h" placeholder="e.g. 5h"></td></tr>
+                            <tr><td>Afternoon</td><td><input type="text" id="sch-2" placeholder="e.g. Sports practice..."></td><td><input type="text" id="sch-2h" placeholder="e.g. 3h"></td></tr>
+                            <tr><td>Evening</td><td><input type="text" id="sch-3" placeholder="e.g. Homework time..."></td><td><input type="text" id="sch-3h" placeholder="e.g. 2h"></td></tr>
+                            <tr><td>Weekend Morning</td><td><input type="text" id="sch-4" placeholder="e.g. Volunteering..."></td><td><input type="text" id="sch-4h" placeholder="e.g. 4h"></td></tr>
+                            <tr><td>Weekend Afternoon</td><td><input type="text" id="sch-5" placeholder="e.g. Leisure/Family time..."></td><td><input type="text" id="sch-5h" placeholder="e.g. 3h"></td></tr>
+                        </tbody>
+                    </table>
+                    <h5 style="margin-top:1.5rem; margin-bottom:1rem;">Draft 3 PPC Questions to ask your partner:</h5>
+                    <div class="question-item"><label class="question-label" for="s3-q1">Question 1 (How long have you been...?):</label><input type="text" class="text-input" id="s3-q1" placeholder="e.g. How long have you been attending football practice?"></div>
+                    <div class="question-item"><label class="question-label" for="s3-q2">Question 2 (What have you been...?):</label><input type="text" class="text-input" id="s3-q2" placeholder="e.g. What have you been doing on weekends lately?"></div>
+                    <div class="question-item"><label class="question-label" for="s3-q3">Question 3 (Have you been...?):</label><input type="text" class="text-input" id="s3-q3" placeholder="e.g. Have you been feeling stressed this week?"></div>
+                    <button class="btn-check-ans" onclick="checkSpeakingQuestions()">Check Questions</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 4 -->
+            <div id="speaking-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Speaking)</span><span class="stage-title">Pair Interview – Record Responses</span></div>
+                    <span class="stage-time">25 Min</span>
+                </div>
+                <p class="stage-instruction">Interview your partner for 5 minutes about their ongoing schedule. Record their responses below using Present Perfect Continuous.</p>
+                <div class="stage-content">
+                    <div class="dialogue-card" style="margin-bottom:1.5rem;">
+                        <div class="dialogue-line"><span class="dialogue-speaker">You:</span><span class="dialogue-text">Use your 3 prepared questions from Stage 3.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Partner:</span><span class="dialogue-text">Answers using Present Perfect Continuous.</span></div>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s4-r1">Partner's response to Question 1:</label><input type="text" class="text-input" id="s4-r1" placeholder="e.g. I have been attending practice for 3 years..."></div>
+                    <div class="question-item"><label class="question-label" for="s4-r2">Partner's response to Question 2:</label><input type="text" class="text-input" id="s4-r2" placeholder="e.g. I have been spending weekends with my family..."></div>
+                    <div class="question-item"><label class="question-label" for="s4-r3">Partner's response to Question 3:</label><input type="text" class="text-input" id="s4-r3" placeholder="e.g. Yes, I have been feeling quite overwhelmed..."></div>
+                    <div class="question-item">
+                        <label class="question-label" for="s4-share">Share your partner's schedule summary (using Present Perfect Continuous):</label>
+                        <textarea class="writing-textarea" id="s4-share" style="height:100px;" placeholder="My partner has been attending... They have been managing... Recently, they have been feeling..."></textarea>
+                    </div>
+                    <button class="btn-check-ans" onclick="checkSpeakingInterview()">Check PPC Usage</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 5 -->
+            <div id="speaking-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Speaking)</span><span class="stage-title">Peer-Feedback Session</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Partners rate each other using the simple peer-feedback checklist. Submit your completed checklist.</p>
+                <div class="stage-content">
+                    <div class="evaluation-rubric-card">
+                        <h5>Peer-Feedback Checklist (3 Criteria)</h5>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">1. Grammar – Present Perfect Continuous</span><span class="rubric-desc">Partner used "have/has been + verb-ing" correctly.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c1"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">2. Fluency</span><span class="rubric-desc">Partner spoke clearly without long pauses.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c2"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">3. Suggestion Phrases</span><span class="rubric-desc">Partner used "you might / could" when giving advice.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c3"></div>
+                    </div>
+                    <div class="question-item" style="margin-top:1.5rem;"><label class="question-label" for="s5-feedback">Additional feedback comment:</label><input type="text" class="text-input" id="s5-feedback" placeholder="e.g. Your pronunciation of 'prioritize' was excellent..."></div>
+                    
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="s5-student-info" style="margin-top: 1.5rem;">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="s5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="s5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="s5-student-date">Fecha / Date:</label>
+                                <input type="date" id="s5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="s5-student-time">Hora / Time:</label>
+                                <input type="time" id="s5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitSpeakingChecklist()">Submit Checklist</button>
+
+                    <div class="eval-result-card" id="s5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="s5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="s5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="s5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="s5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 6 -->
+            <div id="speaking-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Speaking)</span><span class="stage-title">Reflection – Fluency Challenge</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Answer: 'What was the most challenging part of speaking today?' Suggest 2 ways to improve your fluency.</p>
+                <div class="stage-content">
+                    <div class="question-item"><label class="question-label" for="s6-challenge">What was the most challenging part of speaking today?</label><input type="text" class="text-input" id="s6-challenge" placeholder="e.g. Forming PPC questions quickly was the hardest part..."></div>
+                    <div class="question-item"><label class="question-label" for="s6-improve1">Way 1 to improve fluency:</label><input type="text" class="text-input" id="s6-improve1" placeholder="e.g. Practice speaking PPC sentences at home daily..."></div>
+                    <div class="question-item"><label class="question-label" for="s6-improve2">Way 2 to improve fluency:</label><input type="text" class="text-input" id="s6-improve2" placeholder="e.g. Record myself and listen for hesitations..."></div>
+                    <button class="btn-check-ans" onclick="submitSpeakingReflection()">Post Reflection</button>
+                </div>
+                                        <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfmtm7xeGz0ZqOHbBIZsooZAwDpXvM5DAjAd6z5m0U0ypMIA/viewform" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('speaking')">Finish Speaking ✓</button>
+                </div>
+            </div>
+
+        </div>
+<!-- end writing -->
+
+    </main>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast-feedback">
+    <span id="toast-icon">💡</span>
+    <span id="toast-message">Feedback!</span>
+</div>
+
+<script src="plan3.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 4: Learning to Relax - Scenario: Learning to Balance</title>
+    <link rel="stylesheet" href="plan4.css">
+</head>
+<body data-skill="writing">
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" style="display: none;">
+        <div class="brand-section">
+            <span class="brand-title">Relax Plan 4</span>
+            <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-menu" id="skillsMenu">
+                <li class="nav-item active" data-skill="listening" id="nav-listening">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>🎧</span><span>1. Listening Skill</span></div>
+                        <span class="skill-status" id="status-listening"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="reading" id="nav-reading">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>📖</span><span>2. Reading Skill</span></div>
+                        <span class="skill-status" id="status-reading"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>💬</span><span>3. Speaking Skill</span></div>
+                        <span class="skill-status" id="status-speaking"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="writing" id="nav-writing">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>✍️</span><span>4. Writing Skill</span></div>
+                        <span class="skill-status" id="status-writing"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer"><p>Topic: Learning to Relax</p></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan4hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 4
+            </span>
+        </div>
+        <header class="top-header">
+            <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+            <h1 class="lesson-title">Learning to Relax</h1>
+        </header>
+
+        <section class="objectives-card">
+            <div class="objectives-grid">
+                <div class="objective-item">
+                    <h4>Specific Objective</h4>
+                    <p id="objectiveText">Students will be able to listen to a discussion about school-life balance and interpret three relaxation strategies individually during a comprehension grid completion task by the end of the lesson.</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Learning Outcomes</h4>
+                    <ul class="outcome-list" id="outcomesList">
+                        <li>Can describe the storyline of an audio or visual narrative about balancing school and personal life (e.g., "The speaker shared how they've been balancing their schoolwork with their passion for volunteering.").</li>
+                        <li>Can comprehend extended discussions on strategies for learning to relax and maintaining well-being (e.g., "The speaker explained that practicing relaxation techniques like deep breathing and time management is essential for mental health.").</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEPPER -->
+        <nav class="stage-navigation" id="stageNav">
+            <div class="stage-step active" data-stage="1"><div class="step-bubble">1</div><span class="step-label">Initial Activity</span></div>
+            <div class="stage-step" data-stage="2"><div class="step-bubble">2</div><span class="step-label">Presentation</span></div>
+            <div class="stage-step" data-stage="3"><div class="step-bubble">3</div><span class="step-label">Preparation</span></div>
+            <div class="stage-step" data-stage="4"><div class="step-bubble">4</div><span class="step-label">Execution</span></div>
+            <div class="stage-step" data-stage="5"><div class="step-bubble">5</div><span class="step-label">Evaluation</span></div>
+            <div class="stage-step" data-stage="6"><div class="step-bubble">6</div><span class="step-label">Reflection</span></div>
+        </nav>
+
+        <!-- ========== LISTENING ========== -->
+        
+<div id="writing-section" class="skill-section">
+
+            <!-- W Stage 1 -->
+            <div id="writing-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Writing)</span><span class="stage-title">Digital Visual Poster Analysis</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Observe the elements of the digital balance poster. Select a team theme for your collaborative tips.</p>
+                <div class="stage-content">
+                    <div class="team-themes-grid">
+                        <div class="theme-card" id="theme-1" onclick="selectTeamTheme(1)">
+                            <div class="theme-card-icon">🧘‍♀️✨</div>
+                            <div class="theme-card-title">Mindful Time Management</div>
+                        </div>
+                        <div class="theme-card" id="theme-2" onclick="selectTeamTheme(2)">
+                            <div class="theme-card-icon">🏃‍♂️🔋</div>
+                            <div class="theme-card-title">Active Recharging</div>
+                        </div>
+                        <div class="theme-card" id="theme-3" onclick="selectTeamTheme(3)">
+                            <div class="theme-card-icon">📝📆</div>
+                            <div class="theme-card-title">Stress-Free Study Planning</div>
+                        </div>
+                    </div>
+
+                    <div class="question-item">
+                        <label class="question-label" for="w1-q1">Why did you select this theme? What action paragraphs would you include?</label>
+                        <input type="text" class="text-input" id="w1-q1" placeholder="Describe your group's poster strategy...">
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 2 -->
+            <div id="writing-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Writing)</span><span class="stage-title">Collaborative Framework & Roles</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Organize into teams of four. Assign the core writing role to yourself to manage group work.</p>
+                <div class="stage-content">
+                    <h5>Select Your Individual Role in the Writing Team:</h5>
+                    <div class="role-cards">
+                        <div class="role-card" id="role-planner" onclick="selectGroupRole('planner')">
+                            <div class="role-icon">🗺️</div>
+                            <h5>Planner</h5>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.35rem;">Drafts structural layouts.</p>
+                        </div>
+                        <div class="role-card" id="role-writer" onclick="selectGroupRole('writer')">
+                            <div class="role-icon">✍️</div>
+                            <h5>Writer</h5>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.35rem;">Drafts collaborative text sentences.</p>
+                        </div>
+                        <div class="role-card" id="role-reviewer" onclick="selectGroupRole('reviewer')">
+                            <div class="role-icon">🔍</div>
+                            <h5>Reviewer</h5>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.35rem;">Checks modal usage & spellings.</p>
+                        </div>
+                        <div class="role-card" id="role-designer" onclick="selectGroupRole('designer')">
+                            <div class="role-icon">🎨</div>
+                            <h5>Designer</h5>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.35rem;">Adjusts formatting & highlights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 3 -->
+            <div id="writing-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Writing)</span><span class="stage-title">Drafting Layout & Modals</span></div>
+                    <span class="stage-time">40 Min</span>
+                </div>
+                <p class="stage-instruction">Draft your balance plan outline. Use correct modal verbs in the sentence check field.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label" for="w3-rough">Outline your draft sections (List 3 sections for the poster):</label>
+                        <input type="text" class="text-input" id="w3-rough" placeholder="Section 1: Daily Sleep, Section 2: Walk breaks...">
+                    </div>
+
+                    <div class="question-item">
+                        <label class="question-label" for="w3-modal-check">Practice sentence (Must include at least one modal verb like should/could/must):</label>
+                        <input type="text" class="text-input" id="w3-modal-check" oninput="verifyWritingModalsLive()" placeholder="e.g. Students must schedule downtime blocks...">
+                    </div>
+                    <div class="grammar-validation-badges">
+                        <div class="validation-badge" id="badge-modal">Modal verb present</div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 4 -->
+            <div id="writing-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Writing)</span><span class="stage-title">Collaborative Balance Plan</span></div>
+                    <span class="stage-time">40 Min</span>
+                </div>
+                <p class="stage-instruction">Write the final draft of your collaborative Balance Plan text. Integrate action verbs and modal suggestions.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label" for="w4-text">Collaborative Balance Plan Text (Minimum 40 words):</label>
+                        <textarea class="scratch-area" id="w4-text" style="height:150px;" oninput="updateWritingLiveMetrics()" placeholder="Write your tips here... e.g. To achieve school-life balance, students should prioritize sleep. We must unwind by scheduling physical walks. Taking deep breathing sessions could reduce exam pressure."></textarea>
+                    </div>
+
+                    <div class="grammar-validation-badges">
+                        <div class="validation-badge" id="badge-w4-wordcount">Word count: 0 / 40</div>
+                        <div class="validation-badge" id="badge-w4-modal">Modal verb present</div>
+                        <div class="validation-badge" id="badge-w4-action">Action verbs present (prioritize/unwind/schedule/breathe)</div>
+                    </div>
+                    <button class="btn-check-ans" onclick="submitWritingPlanDraft()">Validate Plan</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 5 -->
+            <div id="writing-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Writing)</span><span class="stage-title">Peer Editing Workshop</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Swap work with another group. Correct their spelling and modal structure. Click on corrected words below to highlight corrections.</p>
+                <div class="stage-content">
+                    <div class="red-pen-container">
+                        <h5>Draft of Group B (Click the highlighted mistakes to fix them):</h5>
+                        <p class="red-pen-text" id="red-pen-paragraph">
+                            "To balance school life, students <span class="red-pen-mark" id="markup-1" onclick="applyCorrection(1)">should not</span> relax. They <span class="red-pen-mark" id="markup-2" onclick="applyCorrection(2)">could forgot</span> sleep. Taking walks <span class="red-pen-mark" id="markup-3" onclick="applyCorrection(3)">does not</span> help."
+                        </p>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <h5>Peer-Review Checklist:</h5>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w5-c1">
+                            <label class="checklist-label">Active verbs are correct and clear</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w5-c2">
+                            <label class="checklist-label">Modals of advice are correctly used</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w5-c3">
+                            <label class="checklist-label">Correct spelling throughout the draft</label>
+                        </div>
+                    </div>
+
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="w5-student-info" style="margin-top:1.5rem;">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="w5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="w5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="w5-student-date">Fecha / Date:</label>
+                                <input type="date" id="w5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="w5-student-time">Hora / Time:</label>
+                                <input type="time" id="w5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitPeerEditReport()">Submit Edits</button>
+
+                    <div class="eval-result-card" id="w5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="w5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date &amp; Time:</strong> <span id="w5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="w5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="w5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 6 -->
+            <div id="writing-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Writing)</span><span class="stage-title">Collaboration Reflection</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Discuss what was most challenging in group writing, and submit your self-reflection checklist on collaboration.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label" for="w6-challenge">What was the most challenging part of writing in groups?</label>
+                        <input type="text" class="text-input" id="w6-challenge" placeholder="e.g. Coordinating ideas and agreeing on the structure...">
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <h5>Group Collaboration Checklist</h5>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w6-check1">
+                            <label class="checklist-label">We listened to everyone's ideas during role assignment.</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w6-check2">
+                            <label class="checklist-label">Every group member drafted at least one suggestion tip.</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" class="checklist-checkbox" id="w6-check3">
+                            <label class="checklist-label">We corrected typos cooperatively during peer editing.</label>
+                        </div>
+                    </div>
+                </div>
+                                        <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTaaNwT20EdI5YYZbJlshIroRkKjVv4ZZbDW6Hcw6akTgQTw/viewform" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="finishWritingLessons()">Finish Writing Lesson Plan ✓</button>
+                </div>
+            </div>
+
+        </div>
+<!-- END WRITING -->
+
+    </main>
+</div>
+
+<!-- Toast Feedback -->
+<div id="toast" class="toast-feedback">
+    <span id="toast-icon"></span>
+    <span id="toast-message"></span>
+</div>
+
+<script src="plan4.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 2: Healthy Minds for Healthy Bodies - Interactive English Lesson</title>
+    <link rel="stylesheet" href="plan2.css">
+</head>
+<body data-skill="reading">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" style="display: none;">
+            <div class="brand-section">
+                <span class="brand-title">HabitTech Plan 2</span>
+                <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu" id="skillsMenu">
+                    <li class="nav-item active" data-skill="listening" id="nav-listening">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>🎧</span>
+                                <span>1. Listening Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-listening"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="reading" id="nav-reading">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>📖</span>
+                                <span>2. Reading Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-reading"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>💬</span>
+                                <span>3. Speaking Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-speaking"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="writing" id="nav-writing">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>✍️</span>
+                                <span>4. Writing Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-writing"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Topic: Healthy Minds for Healthy Bodies</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan2hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 2
+            </span>
+        </div>
+            <!-- Header Section -->
+            <header class="top-header">
+                <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+                <h1 class="lesson-title">Healthy Minds for Healthy Bodies</h1>
+            </header>
+
+            <!-- Objective & Learning Outcomes Card -->
+            <section class="objectives-card" id="objectivesCard">
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <h4>Specific Objective</h4>
+                        <p id="objectiveText">Students will be able to listen to a discussion about mindfulness practices and interpret key mental health suggestions in pairs during a note-taking and sharing task by the end of the lesson.</p>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Learning Outcomes</h4>
+                        <ul class="outcome-list" id="outcomesList">
+                            <li>Can demonstrate understanding of extended discussions about health technologies and long-term habits.</li>
+                            <li>Can identify key points in conversations about mental health practices (e.g., "You might need to practice mindfulness to reduce stress.").</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stage Navigation (Stepper) -->
+            <nav class="stage-navigation" id="stageNav">
+                <div class="stage-step active" data-stage="1">
+                    <div class="step-bubble">1</div>
+                    <span class="step-label">Initial Activity</span>
+                </div>
+                <div class="stage-step" data-stage="2">
+                    <div class="step-bubble">2</div>
+                    <span class="step-label">Presentation</span>
+                </div>
+                <div class="stage-step" data-stage="3">
+                    <div class="step-bubble">3</div>
+                    <span class="step-label">Preparation</span>
+                </div>
+                <div class="stage-step" data-stage="4">
+                    <div class="step-bubble">4</div>
+                    <span class="step-label">Execution</span>
+                </div>
+                <div class="stage-step" data-stage="5">
+                    <div class="step-bubble">5</div>
+                    <span class="step-label">Evaluation</span>
+                </div>
+                <div class="stage-step" data-stage="6" id="stepper-stage-6">
+                    <div class="step-bubble">6</div>
+                    <span class="step-label">Reflection</span>
+                </div>
+            </nav>
+
+            <!-- ================= LISTENING SKILL SECTION ================= -->
+            
+<div id="reading-section" class="skill-section">
+                
+                <!-- Reading Stage 1 -->
+                <div id="reading-stage-1" class="stage-container active">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 1 (Reading)</span>
+                            <span class="stage-title">Screen-Time Contrast</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Select the image that represents your last weekend. Review the slide definition of digital detox.</p>
+                    
+                    <div class="stage-content">
+                        <div class="contrasting-images-grid">
+                            <div class="contrast-image-card" id="contrast-phone" onclick="selectWeekend('phone')">
+                                <span class="contrast-image-emoji">📱🛌</span>
+                                <h4>Screen-heavy weekend</h4>
+                                <p style="font-size:0.8rem; color:var(--text-secondary);">Spent hours scrolling screens in a dark room.</p>
+                            </div>
+                            <div class="contrast-image-card" id="contrast-walk" onclick="selectWeekend('walk')">
+                                <span class="contrast-image-emoji">🌳🚶</span>
+                                <h4>Active outdoor weekend</h4>
+                                <p style="font-size:0.8rem; color:var(--text-secondary);">Went outdoors, walked, disconnected.</p>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="r1-q1">Explain briefly why you chose this weekend representation:</label>
+                            <input type="text" class="text-input" id="r1-q1" placeholder="Type explanation here...">
+                        </div>
+
+                        <div class="grammar-callout" style="background:#f0fdf4; border-color:#bbf7d0;">
+                            <h5>💡 Key Slide Definition: Digital Detox</h5>
+                            <p style="color:var(--text-secondary);"><strong>Digital Detox:</strong> A period of time during which a person refrains from using electronic devices such as smartphones or computers, regarded as an opportunity to reduce stress or focus on social interaction in the physical world.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" disabled>Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 2 -->
+                <div id="reading-stage-2" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 2 (Reading)</span>
+                            <span class="stage-title">Finding Balance Editorial</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Read the editorial. Click on exactly 3 technology keywords (devices, screen-time, notifications) highlighted in the text.</p>
+                    
+                    <div class="stage-content">
+                        <div class="editorial-container">
+                            <h4 class="editorial-title">Finding Balance in a Digital World</h4>
+                            <p class="editorial-p">
+                                Teenagers lately <span class="selectable-word" data-word="have-been-using" style="border-bottom:none; font-weight:bold; color:var(--color-teal);">have been using</span> multiple electronic <span class="selectable-word" data-word="devices">devices</span> for studying and leisure. This constant exposure is affecting concentration levels. Managing our daily <span class="selectable-word" data-word="screen-time">screen-time</span> habits is crucial. Experts warn that constant health checks <span class="selectable-word" data-word="might-cause" style="border-bottom:none; font-weight:bold; color:var(--color-teal);">might cause</span> anxiety.
+                            </p>
+                            <p class="editorial-p">
+                                Disconnecting from mobile <span class="selectable-word" data-word="notifications">notifications</span> is a helpful habit. To maintain focus, students <span class="selectable-word" data-word="could-try" style="border-bottom:none; font-weight:bold; color:var(--color-teal);">could try</span> offline schedules. A balanced routine will lead to a healthier mind.
+                            </p>
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyReadingKeywords()">Check Keyword Highlights</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 3 -->
+                <div id="reading-stage-3" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 3 (Reading)</span>
+                            <span class="stage-title">Text-Mapping Organizer</span>
+                        </div>
+                        <span class="stage-time">18 Min</span>
+                    </div>
+                    <p class="stage-instruction">Fill in the graphic organizer by listing 2 benefits of limiting screen time using quotes from the text.</p>
+                    
+                    <div class="stage-content">
+                        <div class="organizer-column benefits">
+                            <h4>Benefits of Limiting Screen Time (Quotes from Text)</h4>
+                            <div class="question-item" style="border:none; padding:0; margin:1rem 0;">
+                                <label class="question-label" for="r3-quote1">Benefit Quote 1:</label>
+                                <input type="text" class="text-input" id="r3-quote1" placeholder="e.g. Disconnecting from mobile notifications is a helpful habit...">
+                            </div>
+                            <div class="question-item" style="border:none; padding:0; margin:0;">
+                                <label class="question-label" for="r3-quote2">Benefit Quote 2:</label>
+                                <input type="text" class="text-input" id="r3-quote2" placeholder="e.g. A balanced routine will lead to a healthier mind...">
+                            </div>
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyReadingQuotes()">Check Quotes</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 4 -->
+                <div id="reading-stage-4" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 4 (Reading)</span>
+                            <span class="stage-title">Author's Visual Text-Map</span>
+                        </div>
+                        <span class="stage-time">22 Min</span>
+                    </div>
+                    <p class="stage-instruction">Complete the visual text-map outlining the author's primary arguments and recommendations.</p>
+                    
+                    <div class="stage-content">
+                        <div class="organizer-grid" style="margin-top:0;">
+                            <div class="organizer-column benefits">
+                                <h4>Primary Stance / Drawbacks</h4>
+                                <div class="question-item" style="border:none; padding:0; margin-bottom:1rem;">
+                                    <label class="question-label" for="r4-drawback">What is the main drawback mentioned in the article?</label>
+                                    <input type="text" class="text-input" id="r4-drawback" placeholder="e.g. Constant checks might cause anxiety / affects concentration...">
+                                </div>
+                            </div>
+                            
+                            <div class="organizer-column limitations">
+                                <h4>Key Recommendations</h4>
+                                <div class="question-item" style="border:none; padding:0; margin-bottom:1rem;">
+                                    <label class="question-label" for="r4-recommendation">What do experts suggest students do?</label>
+                                    <input type="text" class="text-input" id="r4-recommendation" placeholder="e.g. Offline schedules / Disconnect notifications...">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyReadingTextMap()">Check Text-Map</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 5 -->
+                <div id="reading-stage-5" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 5 (Reading)</span>
+                            <span class="stage-title">Text-Map Evaluation Rubrics</span>
+                        </div>
+                        <span class="stage-time">24 Min</span>
+                    </div>
+                    <p class="stage-instruction">Perform peer evaluations by rating their visual text-maps and entering one positive comment and one suggestion.</p>
+                    
+                    <div class="stage-content">
+                        <div class="stars-wish-grid">
+                            <div class="stars-container">
+                                <h4>🟢 Positive comment</h4>
+                                <input type="text" class="text-input" id="r5-comment" placeholder="e.g. You mapped the recommendations accurately.">
+                            </div>
+                            <div class="wish-container">
+                                <h4>🟡 Improvement Suggestion</h4>
+                                <input type="text" class="text-input" id="r5-suggestion" placeholder="e.g. Try to quote exactly from the text next time.">
+                            </div>
+                        </div>
+                        <!-- Student Registration & Grade Card -->
+                        <div class="eval-student-info" id="r5-student-info">
+                            <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                            <div class="student-info-grid">
+                                <div class="info-field">
+                                    <label for="r5-student-name">Nombre Completo / Full Name:</label>
+                                    <input type="text" id="r5-student-name" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="r5-student-date">Fecha / Date:</label>
+                                    <input type="date" id="r5-student-date" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="r5-student-time">Hora / Time:</label>
+                                    <input type="time" id="r5-student-time" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-check-ans" onclick="submitReadingEvaluation()">Post Rubrics Feedback</button>
+
+                        <div class="eval-result-card" id="r5-result-card" style="display:none;">
+                            <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                            <div class="result-body">
+                                <div class="result-row"><strong>Estudiante / Student:</strong> <span id="r5-res-name"></span></div>
+                                <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="r5-res-datetime"></span></div>
+                                <div class="result-row score-display">
+                                    <strong>Calificación / Score:</strong>
+                                    <span class="score-value" id="r5-res-score"></span>
+                                </div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar" id="r5-score-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 6 -->
+                <div id="reading-stage-6" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 6 (Reading)</span>
+                            <span class="stage-title">Reading Comprehension & Goals</span>
+                        </div>
+                        <span class="stage-time">16 Min</span>
+                    </div>
+                    <p class="stage-instruction">Select your reading comprehension level. State a personal goal regarding screen-time habits.</p>
+                    
+                    <div class="stage-content">
+                        <h4 style="text-align:center;">Rate Your Reading Comprehension (Fingers rating):</h4>
+                        <div class="confidence-scale">
+                            <button class="confidence-button" onclick="selectConfidence(1)">1</button>
+                            <button class="confidence-button" onclick="selectConfidence(2)">2</button>
+                            <button class="confidence-button" onclick="selectConfidence(3)">3</button>
+                        </div>
+
+                        <div class="question-item" style="margin-top:2rem;">
+                            <label class="question-label" for="r6-goal">State one personal screen-time goal for this week:</label>
+                            <input type="text" class="text-input" id="r6-goal" placeholder="e.g. I want to limit my social media screen-time to 1 hour daily...">
+                        </div>
+                        <button class="btn-check-ans" onclick="submitReadingGoals()">Post Goal & Rating</button>
+                    </div>
+                    
+                                            <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJJwig_TWmLOAFfVN-_7BqTMTTybczx3iQ3DoVkmaboe6MGQ/viewform" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="markSkillComplete('reading')">Finish Reading Skill ✓</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- Toast Popup Notifications for Formative Feedback -->
+    <div id="toast" class="toast-feedback">
+        <span id="toast-icon">💡</span>
+        <span id="toast-message">Feedback loaded!</span>
+    </div>
+
+    <script src="plan2.js"></script>
+</body>
+</html>

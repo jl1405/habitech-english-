@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Health Technology to Form Good Habits - Interactive English Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-skill="reading">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" style="display: none;">
+            <div class="brand-section">
+                <span class="brand-title">HabitTech English</span>
+                <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu" id="skillsMenu">
+                    <li class="nav-item active" data-skill="listening" id="nav-listening">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>🎧</span>
+                                <span>1. Listening Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-listening"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="reading" id="nav-reading">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>📖</span>
+                                <span>2. Reading Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-reading"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>💬</span>
+                                <span>3. Speaking Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-speaking"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="writing" id="nav-writing">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>✍️</span>
+                                <span>4. Writing Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-writing"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Topic: Using Health Technology to Form Good Habits</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan1hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 1
+            </span>
+        </div>
+            <!-- Header Section -->
+            <header class="top-header">
+                <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+                <h1 class="lesson-title">Using Health Technology to Form Good Habits</h1>
+            </header>
+
+            <!-- Objective & Learning Outcomes Card -->
+            <section class="objectives-card" id="objectivesCard">
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <h4>Specific Objective</h4>
+                        <p id="objectiveText">Students will be able to listen to a fitness podcast and interpret recommendations about tracking sleep patterns in pairs during a chart-completion task by the end of the lesson.</p>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Learning Outcomes</h4>
+                        <ul class="outcome-list" id="outcomesList">
+                            <li>Can demonstrate understanding of extended discussions about health technologies and long-term habits.</li>
+                            <li>Can follow a simulated negotiation between a patient and a health coach about creating a fitness plan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stage Navigation (Stepper) -->
+            <nav class="stage-navigation" id="stageNav">
+                <div class="stage-step active" data-stage="1">
+                    <div class="step-bubble">1</div>
+                    <span class="step-label">Initial Activity</span>
+                </div>
+                <div class="stage-step" data-stage="2">
+                    <div class="step-bubble">2</div>
+                    <span class="step-label">Presentation</span>
+                </div>
+                <div class="stage-step" data-stage="3">
+                    <div class="step-bubble">3</div>
+                    <span class="step-label">Preparation</span>
+                </div>
+                <div class="stage-step" data-stage="4">
+                    <div class="step-bubble">4</div>
+                    <span class="step-label">Execution</span>
+                </div>
+                <div class="stage-step" data-stage="5">
+                    <div class="step-bubble">5</div>
+                    <span class="step-label">Evaluation</span>
+                </div>
+                <div class="stage-step" data-stage="6">
+                    <div class="step-bubble">6</div>
+                    <span class="step-label">Reflection</span>
+                </div>
+            </nav>
+
+            <!-- ================= LISTENING SKILL SECTION ================= -->
+            
+<div id="reading-section" class="skill-section">
+                
+                <!-- Reading Stage 1 -->
+                <div id="reading-stage-1" class="stage-container active">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 1 (Reading)</span>
+                            <span class="stage-title">Wellness Apps Intro</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Look at the app icons and identify their functions. Share your opinions on these apps.</p>
+                    
+                    <div class="stage-content">
+                        <div class="logos-container">
+                            <div class="app-logo-card">
+                                <span class="app-logo-img">🧘</span>
+                                <select id="r1-logo1">
+                                    <option value="">Choose Function...</option>
+                                    <option value="meditation">Meditation & Mindfulness</option>
+                                    <option value="fitness">Workout & Calories</option>
+                                    <option value="nutrition">Diet & Healthy Eating</option>
+                                </select>
+                            </div>
+                            <div class="app-logo-card">
+                                <span class="app-logo-img">🏃</span>
+                                <select id="r1-logo2">
+                                    <option value="">Choose Function...</option>
+                                    <option value="meditation">Meditation & Mindfulness</option>
+                                    <option value="fitness">Workout & Calories</option>
+                                    <option value="nutrition">Diet & Healthy Eating</option>
+                                </select>
+                            </div>
+                            <div class="app-logo-card">
+                                <span class="app-logo-img">🍎</span>
+                                <select id="r1-logo3">
+                                    <option value="">Choose Function...</option>
+                                    <option value="meditation">Meditation & Mindfulness</option>
+                                    <option value="fitness">Workout & Calories</option>
+                                    <option value="nutrition">Diet & Healthy Eating</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="r1-q1">1. Have you ever used any health or fitness apps? If yes, which ones?</label>
+                            <input type="text" class="text-input" id="r1-q1" placeholder="Describe your experiences...">
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="r1-q2">2. Do you think wellness apps truly help people form long-lasting habits?</label>
+                            <input type="text" class="text-input" id="r1-q2" placeholder="Why or why not...">
+                        </div>
+                        
+                        <div class="vocab-section">
+                            <h5>Vocabulary Vocabulary Spotlight:</h5>
+                            <div class="vocab-badge-container">
+                                <span class="vocab-badge" title="Short for application: software program designed to perform a specific function directly for the user on a mobile device.">📱 app</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" disabled>Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 2 -->
+                <div id="reading-stage-2" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 2 (Reading)</span>
+                            <span class="stage-title">Opinion Editorial Reading</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Read the editorial. Click to highlight exactly 3 transition words used in the text (e.g. However, Furthermore, On the other hand).</p>
+                    
+                    <div class="stage-content">
+                        <div class="editorial-container">
+                            <h4 class="editorial-title">Do Wellness Apps Really Help Us?</h4>
+                            <p class="editorial-p">
+                                Wellness applications have exploded in popularity over the last few years. Millions of teenagers track their exercise, calories, and sleep daily. <span class="selectable-word" data-word="However">However</span>, are these tools truly beneficial for our mental and physical health? Proponents claim that wearables build discipline and establish consistency. <span class="selectable-word" data-word="Furthermore">Furthermore</span>, they give us real-time feedback that pushes us to complete our targets.
+                            </p>
+                            <p class="editorial-p">
+                                <span class="selectable-word" data-word="In contrast">In contrast</span>, critics argue that excessive tracking leads to stress. Constant notifications can trigger anxiety rather than positive motivation. <span class="selectable-word" data-word="Consequently">Consequently</span>, users might check their metrics obsessively. While technology can outline our goals, we must build internal drive. <span class="selectable-word" data-word="Therefore">Therefore</span>, we should use these apps as assistants, not as strict rules.
+                            </p>
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyReadingTransitions()">Check Highlighted Transitions</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 3 -->
+                <div id="reading-stage-3" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 3 (Reading)</span>
+                            <span class="stage-title">Graphic Organizer Preparation</span>
+                        </div>
+                        <span class="stage-time">18 Min</span>
+                    </div>
+                    <p class="stage-instruction">Review how to categorize benefits and limitations. Read the sample categorization before starting the team task.</p>
+                    
+                    <div class="stage-content">
+                        <div class="organizer-grid">
+                            <div class="organizer-column benefits">
+                                <h4>🟢 Benefits (Pros)</h4>
+                                <div class="organizer-list">
+                                    <div class="draggable-item" style="cursor:default; border-color:var(--color-success);">
+                                        <strong>Example:</strong> Wearables build discipline and establish consistency by offering daily targets.
+                                    </div>
+                                    <div class="draggable-item" style="cursor:default; border-color:var(--color-success);">
+                                        <strong>Example:</strong> Provides real-time metrics feedback.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="organizer-column limitations">
+                                <h4>🟡 Limitations (Cons)</h4>
+                                <div class="organizer-list">
+                                    <div class="draggable-item" style="cursor:default; border-color:var(--color-warning);">
+                                        <strong>Example:</strong> Constant notifications can trigger anxiety rather than motivation.
+                                    </div>
+                                    <div class="draggable-item" style="cursor:default; border-color:var(--color-warning);">
+                                        <strong>Example:</strong> Excessive tracking leads to checking metrics obsessively.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 4 -->
+                <div id="reading-stage-4" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 4 (Reading)</span>
+                            <span class="stage-title">Completing the Graphic Organizer</span>
+                        </div>
+                        <span class="stage-time">22 Min</span>
+                    </div>
+                    <p class="stage-instruction">Sort the following statements by dragging or clicking them to assign them to Benefits or Limitations based on the editorial.</p>
+                    
+                    <div class="stage-content">
+                        <div class="draggable-pool" id="statements-pool">
+                            <div class="draggable-item" draggable="true" id="item-b1" onclick="assignTo('b1', 'benefits')">Builds exercise consistency</div>
+                            <div class="draggable-item" draggable="true" id="item-l1" onclick="assignTo('l1', 'limitations')">Causes excessive obsession with metrics</div>
+                            <div class="draggable-item" draggable="true" id="item-b2" onclick="assignTo('b2', 'benefits')">Real-time stats feedback</div>
+                            <div class="draggable-item" draggable="true" id="item-l2" onclick="assignTo('l2', 'limitations')">Triggers notifications anxiety</div>
+                            <div class="draggable-item" draggable="true" id="item-b3" onclick="assignTo('b3', 'benefits')">Discipline encouragement</div>
+                            <div class="draggable-item" draggable="true" id="item-l3" onclick="assignTo('l3', 'limitations')">Lacks internal drive building</div>
+                        </div>
+                        
+                        <div class="organizer-grid">
+                            <div class="organizer-column benefits" id="column-benefits">
+                                <h4>🟢 Benefits (3 Required)</h4>
+                                <div class="organizer-list" id="list-benefits" ondragover="allowDrop(event)" ondrop="dropItem(event, 'benefits')">
+                                    <!-- Items go here -->
+                                </div>
+                            </div>
+                            
+                            <div class="organizer-column limitations" id="column-limitations">
+                                <h4>🟡 Limitations (3 Required)</h4>
+                                <div class="organizer-list" id="list-limitations" ondragover="allowDrop(event)" ondrop="dropItem(event, 'limitations')">
+                                    <!-- Items go here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-check-ans" onclick="verifyGraphicOrganizer()">Validate Organizer</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 5 -->
+                <div id="reading-stage-5" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 5 (Reading)</span>
+                            <span class="stage-title">Author's Stance Evaluation</span>
+                        </div>
+                        <span class="stage-time">24 Min</span>
+                    </div>
+                    <p class="stage-instruction">Complete the evaluation card answering questions about the writer's overall stance and key transition arguments.</p>
+                    
+                    <div class="stage-content">
+                        <div class="question-item">
+                            <label class="question-label" for="r5-q1">1. What is the writer's overall stance on wellness apps?</label>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="r5-q1" value="positive"> Entirely positive (they believe apps solve all health problems)</label>
+                                <label class="quiz-option"><input type="radio" name="r5-q1" value="balanced"> Balanced (they promote apps for discipline but warn about anxiety/obsession)</label>
+                                <label class="quiz-option"><input type="radio" name="r5-q1" value="negative"> Entirely negative (they believe apps should be banned)</label>
+                            </div>
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="r5-q2">2. Which transition word does the author use to add another supporting point for app benefits?</label>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="r5-q2" value="However"> However</label>
+                                <label class="quiz-option"><input type="radio" name="r5-q2" value="Furthermore"> Furthermore</label>
+                                <label class="quiz-option"><input type="radio" name="r5-q2" value="In contrast"> In contrast</label>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="r5-q3">3. What does the author suggest as the correct way to utilize technology?</label>
+                            <input type="text" class="text-input" id="r5-q3" placeholder="e.g. As assistants, not strict rules...">
+                        </div>
+                        
+                        <!-- Student Registration & Grade Card -->
+                        <div class="eval-student-info" id="r5-student-info">
+                            <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                            <div class="student-info-grid">
+                                <div class="info-field">
+                                    <label for="r5-student-name">Nombre Completo / Full Name:</label>
+                                    <input type="text" id="r5-student-name" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="r5-student-date">Fecha / Date:</label>
+                                    <input type="date" id="r5-student-date" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="r5-student-time">Hora / Time:</label>
+                                    <input type="time" id="r5-student-time" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-check-ans" onclick="gradeReadingEvaluation()">Grade Evaluation Card</button>
+
+                        <div class="eval-result-card" id="r5-result-card" style="display:none;">
+                            <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                            <div class="result-body">
+                                <div class="result-row"><strong>Estudiante / Student:</strong> <span id="r5-res-name"></span></div>
+                                <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="r5-res-datetime"></span></div>
+                                <div class="result-row score-display">
+                                    <strong>Calificación / Score:</strong>
+                                    <span class="score-value" id="r5-res-score"></span>
+                                </div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar" id="r5-score-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Reading Stage 6 -->
+                <div id="reading-stage-6" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 6 (Reading)</span>
+                            <span class="stage-title">Peer Feedback: 2 Stars & a Wish</span>
+                        </div>
+                        <span class="stage-time">16 Min</span>
+                    </div>
+                    <p class="stage-instruction">Perform a peer feedback card by giving two positive comments (stars) and one recommendation (wish) on their work.</p>
+                    
+                    <div class="stage-content">
+                        <div class="stars-wish-grid">
+                            <div class="stars-container">
+                                <h4>⭐️⭐️ Two Stars (Positive Comments)</h4>
+                                <div class="question-item" style="padding:0.5rem; border:none; margin:0;">
+                                    <input type="text" class="text-input" id="r6-star1" placeholder="Star 1: e.g. You identified transitions perfectly." style="margin-bottom:0.5rem;">
+                                    <input type="text" class="text-input" id="r6-star2" placeholder="Star 2: e.g. Your benefits column is accurate.">
+                                </div>
+                            </div>
+                            
+                            <div class="wish-container">
+                                <h4>💫 One Wish (Improvement Area)</h4>
+                                <div class="question-item" style="padding:0.5rem; border:none; margin:0;">
+                                    <input type="text" class="text-input" id="r6-wish" placeholder="Wish: e.g. Try to add more details about anxiety.">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-check-ans" onclick="submitStarsAndWish()">Post Feedback</button>
+                    </div>
+                    
+                                            <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://forms.gle/CZGAbNFpU7ovdRZu7" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="markSkillComplete('reading')">Finish Reading Skill ✓</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- Toast Popup Notifications for Formative Feedback -->
+    <div id="toast" class="toast-feedback">
+        <span id="toast-icon">💡</span>
+        <span id="toast-message">Feedback loaded!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

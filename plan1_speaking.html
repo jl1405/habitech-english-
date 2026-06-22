@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Health Technology to Form Good Habits - Interactive English Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-skill="speaking">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" style="display: none;">
+            <div class="brand-section">
+                <span class="brand-title">HabitTech English</span>
+                <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu" id="skillsMenu">
+                    <li class="nav-item active" data-skill="listening" id="nav-listening">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>🎧</span>
+                                <span>1. Listening Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-listening"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="reading" id="nav-reading">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>📖</span>
+                                <span>2. Reading Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-reading"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>💬</span>
+                                <span>3. Speaking Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-speaking"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="writing" id="nav-writing">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>✍️</span>
+                                <span>4. Writing Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-writing"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Topic: Using Health Technology to Form Good Habits</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan1hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 1
+            </span>
+        </div>
+            <!-- Header Section -->
+            <header class="top-header">
+                <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+                <h1 class="lesson-title">Using Health Technology to Form Good Habits</h1>
+            </header>
+
+            <!-- Objective & Learning Outcomes Card -->
+            <section class="objectives-card" id="objectivesCard">
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <h4>Specific Objective</h4>
+                        <p id="objectiveText">Students will be able to listen to a fitness podcast and interpret recommendations about tracking sleep patterns in pairs during a chart-completion task by the end of the lesson.</p>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Learning Outcomes</h4>
+                        <ul class="outcome-list" id="outcomesList">
+                            <li>Can demonstrate understanding of extended discussions about health technologies and long-term habits.</li>
+                            <li>Can follow a simulated negotiation between a patient and a health coach about creating a fitness plan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stage Navigation (Stepper) -->
+            <nav class="stage-navigation" id="stageNav">
+                <div class="stage-step active" data-stage="1">
+                    <div class="step-bubble">1</div>
+                    <span class="step-label">Initial Activity</span>
+                </div>
+                <div class="stage-step" data-stage="2">
+                    <div class="step-bubble">2</div>
+                    <span class="step-label">Presentation</span>
+                </div>
+                <div class="stage-step" data-stage="3">
+                    <div class="step-bubble">3</div>
+                    <span class="step-label">Preparation</span>
+                </div>
+                <div class="stage-step" data-stage="4">
+                    <div class="step-bubble">4</div>
+                    <span class="step-label">Execution</span>
+                </div>
+                <div class="stage-step" data-stage="5">
+                    <div class="step-bubble">5</div>
+                    <span class="step-label">Evaluation</span>
+                </div>
+                <div class="stage-step" data-stage="6">
+                    <div class="step-bubble">6</div>
+                    <span class="step-label">Reflection</span>
+                </div>
+            </nav>
+
+            <!-- ================= LISTENING SKILL SECTION ================= -->
+            
+<div id="speaking-section" class="skill-section">
+                
+                <!-- Speaking Stage 1 -->
+                <div id="speaking-stage-1" class="stage-container active">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 1 (Speaking)</span>
+                            <span class="stage-title">Coach & Client Roleplay Intro</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Review this initial audio consultation clip and answer the preparatory questions.</p>
+                    
+                    <div class="stage-content">
+                        <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                            "Coach: Hi there! How can I assist you with your habits today?<br>
+                            Client: I want to feel more energetic, but I don't know where to start. I could try walking in the morning.<br>
+                            Coach: That sounds great! You might also try cutting down on screentime before bed. We could check in next week.<br>
+                            Client: Okay! I may struggle with screens, but I'll try."
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="s1-q1">1. What does a health coach do based on this dialogue?</label>
+                            <input type="text" class="text-input" id="s1-q1" placeholder="Type your answer...">
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="s1-q2">2. What specific goals is the client expressing?</label>
+                            <input type="text" class="text-input" id="s1-q2" placeholder="Type your answer...">
+                        </div>
+                        
+                        <div class="vocab-section">
+                            <h5>Target Expression:</h5>
+                            <div class="vocab-badge-container">
+                                <span class="vocab-badge" title="Recommendations given by a coach or wellness practitioner to help clients improve health.">🗣 health suggestions</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" disabled>Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Speaking Stage 2 -->
+                <div id="speaking-stage-2" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 2 (Speaking)</span>
+                            <span class="stage-title">Possibility Modals Template</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Study the conversation structure. Learn how to form suggestions using modals of possibility.</p>
+                    
+                    <div class="stage-content">
+                        <div class="speaking-coach-demo">
+                            <div class="chat-bubble coach">
+                                <span class="chat-sender">Health Coach</span>
+                                <span>"You <strong>could</strong> modify your sleeping patterns by leaving your smartphone in another room."</span>
+                            </div>
+                            <div class="chat-bubble client">
+                                <span class="chat-sender">Client</span>
+                                <span>"That's true. It <strong>might</strong> be difficult, but it <strong>could</strong> help me wake up early."</span>
+                            </div>
+                            <div class="chat-bubble coach">
+                                <span class="chat-sender">Health Coach</span>
+                                <span>"Yes. You <strong>may</strong> also use an old-school alarm clock to avoid morning screens."</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grammar-callout">
+                            <h5>Grammar Focus: Modals of Possibility</h5>
+                            <p>Used to suggest options politely and express potential outcomes without sounding commanding.</p>
+                            <div class="grammar-formula">Subject + could / might / may + Base Verb</div>
+                            <ul class="grammar-samples">
+                                <li>"You <strong>could</strong> try a walking app." (Suggestion)</li>
+                                <li>"It <strong>might</strong> help you sleep deeper." (Possibility)</li>
+                                <li>"We <strong>may</strong> schedule a follow-up." (Uncertain Future)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Speaking Stage 3 -->
+                <div id="speaking-stage-3" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 3 (Speaking)</span>
+                            <span class="stage-title">Drafting Suggestions</span>
+                        </div>
+                        <span class="stage-time">18 Min</span>
+                    </div>
+                    <p class="stage-instruction">Draft 3 physical or healthy activity options for a client. You MUST use a possibility modal (could, might, may) in each sentence.</p>
+                    
+                    <div class="stage-content">
+                        <div class="sentence-frames">
+                            <h5>Sentence Frames to practice:</h5>
+                            <p>• "You could try [activity] to..."</p>
+                            <p>• "It might improve your sleep if you..."</p>
+                            <p>• "You may experience better energy by..."</p>
+                        </div>
+                        
+                        <div class="question-item" style="margin-top:1.5rem;">
+                            <label class="question-label" for="s3-draft1">Option 1 (Using "could"):</label>
+                            <input type="text" class="text-input" id="s3-draft1" placeholder="e.g. You could download a fitness tracker app to monitor your workouts.">
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="s3-draft2">Option 2 (Using "might"):</label>
+                            <input type="text" class="text-input" id="s3-draft2" placeholder="e.g. Taking warm showers before bed might relax your body.">
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="s3-draft3">Option 3 (Using "may"):</label>
+                            <input type="text" class="text-input" id="s3-draft3" placeholder="e.g. Students may feel less stressed if they meditate daily.">
+                        </div>
+                        <button class="btn-check-ans" onclick="validateSpeakingDrafts()">Check Draft Modals</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Speaking Stage 4 -->
+                <div id="speaking-stage-4" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 4 (Speaking)</span>
+                            <span class="stage-title">Simulated Consultation</span>
+                        </div>
+                        <span class="stage-time">22 Min</span>
+                    </div>
+                    <p class="stage-instruction">Choose your role. Interact with the bot to negotiate a fitness plan. Remember to use modal verbs of possibility!</p>
+                    
+                    <div class="stage-content">
+                        <div class="speaking-consultation-arena">
+                            <div class="role-header-cards">
+                                <div class="role-card selected" id="role-coach" onclick="selectSpeakingRole('coach')">
+                                    <div class="role-title">💬 Health Coach</div>
+                                    <div class="role-desc">Suggest habits to client using could, might, may.</div>
+                                </div>
+                                <div class="role-card" id="role-client" onclick="selectSpeakingRole('client')">
+                                    <div class="role-title">👤 Patient / Client</div>
+                                    <div class="role-desc">Respond to options and state limitations.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="speaking-coach-demo" id="consultation-chat" style="height:200px; margin-bottom:0;">
+                                <!-- Chat bubbles here dynamically -->
+                            </div>
+                            
+                            <div class="sticky-form">
+                                <input type="text" class="text-input" id="speaking-chat-input" placeholder="Type your comment to the coach/client here...">
+                                <button class="btn-nav" style="padding:0.75rem 1.5rem;" onclick="sendSpeakingChatMessage()">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Speaking Stage 5 -->
+                <div id="speaking-stage-5" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 5 (Speaking)</span>
+                            <span class="stage-title">Peer/Self Evaluation</span>
+                        </div>
+                        <span class="stage-time">24 Min</span>
+                    </div>
+                    <p class="stage-instruction">Perform an evaluation checklist showing if you or your partner used modal verbs during negotiation.</p>
+                    
+                    <div class="stage-content">
+                        <div class="evaluation-rubric-card">
+                            <h5>Speaking Assessment Checklist</h5>
+                            
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">Modals of Possibility</span>
+                                    <span class="rubric-desc">Used "could", "might", or "may" to propose habits.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="s5-c1">
+                            </div>
+                            
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">Polite & Empathetic suggestions</span>
+                                    <span class="rubric-desc">Showed empathy regarding schedule limitations.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="s5-c2">
+                            </div>
+
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">Habits connection</span>
+                                    <span class="rubric-desc">Proposed strategies focused on health technology tools.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="s5-c3">
+                            </div>
+                        </div>
+                        <!-- Student Registration & Grade Card -->
+                        <div class="eval-student-info" id="s5-student-info">
+                            <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                            <div class="student-info-grid">
+                                <div class="info-field">
+                                    <label for="s5-student-name">Nombre Completo / Full Name:</label>
+                                    <input type="text" id="s5-student-name" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="s5-student-date">Fecha / Date:</label>
+                                    <input type="date" id="s5-student-date" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="s5-student-time">Hora / Time:</label>
+                                    <input type="time" id="s5-student-time" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-check-ans" onclick="submitSpeakingEvaluation()">Verify Checklist</button>
+
+                        <div class="eval-result-card" id="s5-result-card" style="display:none;">
+                            <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                            <div class="result-body">
+                                <div class="result-row"><strong>Estudiante / Student:</strong> <span id="s5-res-name"></span></div>
+                                <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="s5-res-datetime"></span></div>
+                                <div class="result-row score-display">
+                                    <strong>Calificación / Score:</strong>
+                                    <span class="score-value" id="s5-res-score"></span>
+                                </div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar" id="s5-score-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Speaking Stage 6 -->
+                <div id="speaking-stage-6" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 6 (Speaking)</span>
+                            <span class="stage-title">Confidence Rating</span>
+                        </div>
+                        <span class="stage-time">16 Min</span>
+                    </div>
+                    <p class="stage-instruction">Rate your speaking confidence from 1 to 5 stars. Explain briefly using structures learned.</p>
+                    
+                    <div class="stage-content">
+                        <h4 style="text-align:center;">Rate Your Confidence:</h4>
+                        <div class="confidence-scale">
+                            <button class="confidence-button" onclick="selectConfidence(1)">1</button>
+                            <button class="confidence-button" onclick="selectConfidence(2)">2</button>
+                            <button class="confidence-button" onclick="selectConfidence(3)">3</button>
+                            <button class="confidence-button" onclick="selectConfidence(4)">4</button>
+                            <button class="confidence-button" onclick="selectConfidence(5)">5</button>
+                        </div>
+                        
+                        <div class="question-item">
+                            <label class="question-label" for="s6-explanation">Explain your rating choice briefly:</label>
+                            <input type="text" class="text-input" id="s6-explanation" placeholder="e.g. I rated it a 4 because I could easily formulate possibilities...">
+                        </div>
+                        <button class="btn-check-ans" onclick="submitSpeakingConfidence()">Post Confidence Reflection</button>
+                    </div>
+                    
+                                            <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://forms.gle/WkzGdLkz73KUHEtz6" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="markSkillComplete('speaking')">Finish Speaking Skill ✓</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- Toast Popup Notifications for Formative Feedback -->
+    <div id="toast" class="toast-feedback">
+        <span id="toast-icon">💡</span>
+        <span id="toast-message">Feedback loaded!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

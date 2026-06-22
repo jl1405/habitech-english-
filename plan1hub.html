@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 1: Using Health Technology to Form Good Habits</title>
+    <meta name="description" content="Plan 1 - Interactive English skills: Listening, Reading, Speaking, Writing about health technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --font: 'Outfit', sans-serif;
+            --white: #ffffff;
+            --bg: #f8fafc;
+            --border: #e2e8f0;
+            --text: #0f172a;
+            --text-sec: #475569;
+            --text-muted: #94a3b8;
+            --primary: #0284c7;
+            --primary-light: #eff6ff;
+            --radius: 20px;
+            --shadow: 0 4px 24px rgba(15,23,42,0.07);
+            --shadow-lg: 0 12px 40px rgba(15,23,42,0.12);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        body { font-family: var(--font); background: var(--white); color: var(--text); min-height: 100vh; }
+
+        .top-nav {
+            background: var(--white); border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .back-btn {
+            display: flex; align-items: center; gap: 0.5rem;
+            color: var(--text-sec); font-size: 0.9rem; font-weight: 500;
+            text-decoration: none; padding: 0.5rem 1rem;
+            border-radius: 8px; border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .back-btn:hover { background: var(--bg); color: var(--text); }
+        .nav-plan-badge {
+            background: #eff6ff; color: var(--primary);
+            border: 1px solid #bae6fd;
+            padding: 0.4rem 1rem; border-radius: 20px;
+            font-size: 0.8rem; font-weight: 600;
+        }
+
+        .hero {
+            text-align: center; padding: 4rem 2rem 3rem;
+            max-width: 680px; margin: 0 auto;
+        }
+        .hero-plan-num {
+            display: inline-block;
+            background: var(--primary-light); color: var(--primary);
+            border: 1px solid #bae6fd;
+            padding: 0.4rem 1.25rem; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem;
+        }
+        .hero-icon {
+            font-size: 3.5rem; margin-bottom: 1rem;
+            display: block;
+        }
+        .hero h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800; line-height: 1.2;
+            color: var(--text); margin-bottom: 1rem;
+        }
+        .hero p { font-size: 1rem; color: var(--text-sec); line-height: 1.7; }
+
+        .skills-section {
+            max-width: 900px; margin: 0 auto; padding: 0 1.5rem 5rem;
+        }
+        .section-label {
+            text-align: center;
+            font-size: 0.82rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--text-muted); margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .skill-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem 1.75rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+        }
+        /* Skill accent colors */
+        .skill-card.listening::before { background: linear-gradient(90deg,#0284c7,#0ea5e9); }
+        .skill-card.reading::before   { background: linear-gradient(90deg,#059669,#10b981); }
+        .skill-card.speaking::before  { background: linear-gradient(90deg,#7c3aed,#a78bfa); }
+        .skill-card.writing::before   { background: linear-gradient(90deg,#d97706,#fbbf24); }
+
+        .skill-card:hover {
+            border-color: transparent;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .skill-card-icon {
+            width: 60px; height: 60px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+        }
+        .skill-card.listening .skill-card-icon { background: #eff6ff; }
+        .skill-card.reading   .skill-card-icon { background: #f0fdf4; }
+        .skill-card.speaking  .skill-card-icon { background: #faf5ff; }
+        .skill-card.writing   .skill-card-icon { background: #fffbeb; }
+
+        .skill-num {
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--text-muted);
+        }
+        .skill-name {
+            font-size: 1.35rem; font-weight: 700; color: var(--text);
+        }
+        .skill-desc { font-size: 0.88rem; color: var(--text-sec); line-height: 1.6; }
+        .skill-stages {
+            display: flex; gap: 0.3rem; flex-wrap: wrap;
+        }
+        .stage-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--border);
+        }
+        .skill-card.listening .stage-dot { background: #bae6fd; }
+        .skill-card.reading   .stage-dot { background: #a7f3d0; }
+        .skill-card.speaking  .stage-dot { background: #ddd6fe; }
+        .skill-card.writing   .stage-dot { background: #fde68a; }
+
+        .skill-cta {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 1rem; border-top: 1px solid var(--border);
+            margin-top: auto;
+        }
+        .skill-cta-text { font-size: 0.85rem; font-weight: 600; }
+        .skill-card.listening .skill-cta-text { color: #0284c7; }
+        .skill-card.reading   .skill-cta-text { color: #059669; }
+        .skill-card.speaking  .skill-cta-text { color: #7c3aed; }
+        .skill-card.writing   .skill-cta-text { color: #d97706; }
+
+        .skill-cta-arrow {
+            width: 34px; height: 34px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; transition: var(--transition);
+        }
+        .skill-card.listening .skill-cta-arrow { background: #eff6ff; color: #0284c7; }
+        .skill-card.reading   .skill-cta-arrow { background: #f0fdf4; color: #059669; }
+        .skill-card.speaking  .skill-cta-arrow { background: #faf5ff; color: #7c3aed; }
+        .skill-card.writing   .skill-cta-arrow { background: #fffbeb; color: #d97706; }
+
+        .skill-card.listening:hover .skill-cta-arrow { background: #0284c7; color: white; }
+        .skill-card.reading:hover   .skill-cta-arrow { background: #059669; color: white; }
+        .skill-card.speaking:hover  .skill-cta-arrow { background: #7c3aed; color: white; }
+        .skill-card.writing:hover   .skill-cta-arrow { background: #d97706; color: white; }
+
+        @media (max-width: 640px) {
+            .top-nav { padding: 0.75rem 1rem; }
+            .hero { padding: 2.5rem 1.25rem 2rem; }
+            .skills-section { padding: 0 1rem 3rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a class="back-btn" href="home.html">← All Plans</a>
+        <div class="nav-plan-badge">Plan 1 of 4</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-plan-num">📚 Plan 1</div>
+        <span class="hero-icon">💤</span>
+        <h1>Using Health Technology to Form Good Habits</h1>
+        <p>Explore how fitness apps and wearables help us track sleep, exercise, and build healthier lifestyles. Choose a skill below to begin.</p>
+    </section>
+
+    <section class="skills-section">
+        <p class="section-label">Select a Skill to Start</p>
+        <div class="skills-grid">
+
+            <a class="skill-card listening" href="plan1_listening.html">
+                <div class="skill-card-icon">🎧</div>
+                <div>
+                    <div class="skill-num">Skill 1</div>
+                    <div class="skill-name">Listening</div>
+                </div>
+                <div class="skill-desc">Listen to fitness podcast transcripts, identify key vocabulary, track sleep metrics data, and complete comprehension tasks.</div>
+                <div class="skill-stages">
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                </div>
+                <div class="skill-cta">
+                    <span class="skill-cta-text">Start Listening</span>
+                    <div class="skill-cta-arrow">→</div>
+                </div>
+            </a>
+
+            <a class="skill-card reading" href="plan1_reading.html">
+                <div class="skill-card-icon">📖</div>
+                <div>
+                    <div class="skill-num">Skill 2</div>
+                    <div class="skill-name">Reading</div>
+                </div>
+                <div class="skill-desc">Read informational articles and opinion editorials about wellness apps, identify arguments, and analyze the writer's stance.</div>
+                <div class="skill-stages">
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                </div>
+                <div class="skill-cta">
+                    <span class="skill-cta-text">Start Reading</span>
+                    <div class="skill-cta-arrow">→</div>
+                </div>
+            </a>
+
+            <a class="skill-card speaking" href="plan1_speaking.html">
+                <div class="skill-card-icon">💬</div>
+                <div>
+                    <div class="skill-num">Skill 3</div>
+                    <div class="skill-name">Speaking</div>
+                </div>
+                <div class="skill-desc">Role-play health coach consultations, practice modal verbs of possibility, and negotiate about fitness habits in pairs.</div>
+                <div class="skill-stages">
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                </div>
+                <div class="skill-cta">
+                    <span class="skill-cta-text">Start Speaking</span>
+                    <div class="skill-cta-arrow">→</div>
+                </div>
+            </a>
+
+            <a class="skill-card writing" href="plan1_writing.html">
+                <div class="skill-card-icon">✍️</div>
+                <div>
+                    <div class="skill-num">Skill 4</div>
+                    <div class="skill-name">Writing</div>
+                </div>
+                <div class="skill-desc">Write a personal health action plan using the present perfect continuous, draft journal entries, and reflect on well-being goals.</div>
+                <div class="skill-stages">
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                    <div class="stage-dot"></div><div class="stage-dot"></div><div class="stage-dot"></div>
+                </div>
+                <div class="skill-cta">
+                    <span class="skill-cta-text">Start Writing</span>
+                    <div class="skill-cta-arrow">→</div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>

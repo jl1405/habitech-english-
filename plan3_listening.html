@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 3: How to Balance Social and School Activities</title>
+    <link rel="stylesheet" href="plan3.css">
+</head>
+<body data-skill="listening">
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" style="display: none;">
+        <div class="brand-section">
+            <span class="brand-title">Balance Plan 3</span>
+            <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-menu" id="skillsMenu">
+                <li class="nav-item active" data-skill="listening" id="nav-listening">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>🎧</span><span>1. Listening Skill</span></div>
+                        <span class="skill-status" id="status-listening"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="reading" id="nav-reading">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>📖</span><span>2. Reading Skill</span></div>
+                        <span class="skill-status" id="status-reading"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>💬</span><span>3. Speaking Skill</span></div>
+                        <span class="skill-status" id="status-speaking"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="writing" id="nav-writing">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>✍️</span><span>4. Writing Skill</span></div>
+                        <span class="skill-status" id="status-writing"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer"><p>Topic: How to Balance Social and School Activities</p></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan3hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 3
+            </span>
+        </div>
+        <header class="top-header">
+            <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+            <h1 class="lesson-title">How to Balance Social and School Activities</h1>
+        </header>
+
+        <section class="objectives-card">
+            <div class="objectives-grid">
+                <div class="objective-item">
+                    <h4>Specific Objective</h4>
+                    <p id="objectiveText">Students will be able to listen to an interview about school-life balance and interpret key suggestions for relaxation in pairs during a graphic organizer completion activity.</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Learning Outcomes</h4>
+                    <ul class="outcome-list" id="outcomesList">
+                        <li>Can describe the storyline of an audio or visual narrative about balancing school and personal life.</li>
+                        <li>Can comprehend extended discussions on strategies for learning to relax and maintaining well-being.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEPPER -->
+        <nav class="stage-navigation" id="stageNav">
+            <div class="stage-step active" data-stage="1"><div class="step-bubble">1</div><span class="step-label">Initial Activity</span></div>
+            <div class="stage-step" data-stage="2"><div class="step-bubble">2</div><span class="step-label">Presentation</span></div>
+            <div class="stage-step" data-stage="3"><div class="step-bubble">3</div><span class="step-label">Preparation</span></div>
+            <div class="stage-step" data-stage="4"><div class="step-bubble">4</div><span class="step-label">Execution</span></div>
+            <div class="stage-step" data-stage="5"><div class="step-bubble">5</div><span class="step-label">Evaluation</span></div>
+            <div class="stage-step" data-stage="6"><div class="step-bubble">6</div><span class="step-label">Reflection</span></div>
+        </nav>
+
+        <!-- ========== LISTENING ========== -->
+        
+<div id="listening-section" class="skill-section active">
+
+            <!-- L Stage 1 -->
+            <div id="listening-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Listening)</span><span class="stage-title">School Stress Sounds</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Click each sound effect card to hear it. List 2 feelings you connect with each sound. Then label the balance scale sides.</p>
+                <div class="stage-content">
+                    <div class="sound-effects-grid">
+                        <div class="sound-card" onclick="playSound('alarm')"><div class="sound-icon">⏰</div><div class="sound-title">Morning Alarm</div></div>
+                        <div class="sound-card" onclick="playSound('typing')"><div class="sound-icon">⌨️</div><div class="sound-title">Typing Homework</div></div>
+                        <div class="sound-card" onclick="playSound('crowd')"><div class="sound-icon">📢</div><div class="sound-title">Noisy Hallway</div></div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="l1-feelings">List 2 feelings these sounds bring to mind:</label>
+                        <input type="text" class="text-input" id="l1-feelings" placeholder="e.g. stressed, overwhelmed...">
+                    </div>
+                    <h5 style="margin-bottom:1rem; margin-top:1.5rem;">Balance Scale: Label the two sides below</h5>
+                    <div class="balance-scale-wrapper">
+                        <div class="scale-side" id="scale-school" onclick="toggleScale('school')">
+                            <span class="scale-icon">📚</span>
+                            <span class="scale-label">School Activities</span>
+                            <span class="scale-desc">Homework, tests, classes</span>
+                        </div>
+                        <div class="scale-beam"><span>⚖️</span><span style="font-size:0.75rem; color:var(--text-muted);">Balance</span></div>
+                        <div class="scale-side" id="scale-social" onclick="toggleScale('social')">
+                            <span class="scale-icon">🎉</span>
+                            <span class="scale-label">Social Activities</span>
+                            <span class="scale-desc">Friends, hobbies, sports</span>
+                        </div>
+                    </div>
+                    <div class="vocab-badge-container">
+                        <span class="vocab-badge" title="Personal time used for rest and leisure away from responsibilities.">🌿 downtime</span>
+                        <span class="vocab-badge" title="To arrange or order activities in order of importance.">📋 prioritize</span>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 2 -->
+            <div id="listening-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Listening)</span><span class="stage-title">Interview: School-Life Balance</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Read the interview transcript segment below. Click on the keywords 'prioritize' and 'stress' in the text to highlight them. Then answer the 3 questions.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Host: Today we are talking about school and social life. How do you manage your time?<br>
+                        Speaker: It has been really challenging. I have been trying to <span class='kw-word' data-word='prioritize' style='cursor:pointer; border-bottom:2px dashed var(--color-primary); padding:0 2px;'>prioritize</span> my tasks, but the <span class='kw-word' data-word='stress' style='cursor:pointer; border-bottom:2px dashed var(--color-primary); padding:0 2px;'>stress</span> builds up. I learned that setting clear downtime helps a lot. You might schedule one afternoon a week just for yourself. That could reduce anxiety significantly."
+                    </div>
+                    <div class="question-item"><label class="question-label" for="l2-q1">1. What has the speaker been trying to do?</label><input type="text" class="text-input" id="l2-q1" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="l2-q2">2. What does the speaker recommend scheduling?</label><input type="text" class="text-input" id="l2-q2" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="l2-q3">3. What could regular downtime reduce?</label><input type="text" class="text-input" id="l2-q3" placeholder="Type answer..."></div>
+                    <button class="btn-check-ans" onclick="checkListeningQuestions()">Check Answers</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 3 -->
+            <div id="listening-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Listening)</span><span class="stage-title">Graphic Organizer – 4 Boxes</span></div>
+                    <span class="stage-time">15 Min</span>
+                </div>
+                <p class="stage-instruction">Read the 4 categories in pairs. Write one simple idea in each box. Underline the modal verbs in the sample sentences below.</p>
+                <div class="stage-content">
+                    <div class="grammar-callout" style="margin-bottom:1.5rem;">
+                        <h5>Sample Sentences with Modals (Underline them mentally):</h5>
+                        <ul class="grammar-samples">
+                            <li>"You <strong>could</strong> schedule one free afternoon each week."</li>
+                            <li>"Students <strong>might</strong> feel less stressed if they plan ahead."</li>
+                            <li>"Taking breaks <strong>may</strong> improve overall productivity."</li>
+                        </ul>
+                    </div>
+                    <div class="four-box-organizer">
+                        <div class="organizer-box"><h5>📚 School Pressures</h5><textarea id="box1" placeholder="e.g. Too many exams at once..."></textarea></div>
+                        <div class="organizer-box"><h5>🎉 Social Needs</h5><textarea id="box2" placeholder="e.g. Friends need quality time..."></textarea></div>
+                        <div class="organizer-box"><h5>💡 Relaxation Strategies</h5><textarea id="box3" placeholder="e.g. Short breathing exercises..."></textarea></div>
+                        <div class="organizer-box"><h5>🎯 Balance Tips</h5><textarea id="box4" placeholder="e.g. Prioritize tasks by deadline..."></textarea></div>
+                    </div>
+                    <button class="btn-check-ans" onclick="checkFourBoxes()">Submit Organizer</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 4 -->
+            <div id="listening-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Listening)</span><span class="stage-title">Full Interview – 4 Tips</span></div>
+                    <span class="stage-time">25 Min</span>
+                </div>
+                <p class="stage-instruction">Read the full interview transcript below. Write 4 tips using modals of possibility. Then summarize the advice in at least 3 sentences.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Full Interview: I have been coaching students for years. Tip one: You could set a weekly planner every Sunday. Tip two: Students might reduce stress by including one social event in their schedule. Tip three: You may want to communicate your needs to teachers early. Tip four: Taking short breaks during study sessions could boost focus. These strategies have helped many students achieve a better balance."
+                    </div>
+                    <h5 style="margin-bottom:1rem;">Write 4 Tips Using Modals (could / might / may):</h5>
+                    <div class="question-item"><label class="question-label" for="l4-tip1">Tip 1:</label><input type="text" class="text-input" id="l4-tip1" placeholder="e.g. You could set a weekly planner..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip2">Tip 2:</label><input type="text" class="text-input" id="l4-tip2" placeholder="e.g. Students might reduce stress by..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip3">Tip 3:</label><input type="text" class="text-input" id="l4-tip3" placeholder="e.g. You may want to communicate..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip4">Tip 4:</label><input type="text" class="text-input" id="l4-tip4" placeholder="e.g. Taking short breaks could boost..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-summary">Summary (3+ sentences):</label><textarea class="writing-textarea" id="l4-summary" style="height:120px;" placeholder="Summarize the advice in at least 3 sentences..."></textarea></div>
+                    <button class="btn-check-ans" onclick="checkListeningTips()">Submit Tips & Summary</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 5 -->
+            <div id="listening-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Listening)</span><span class="stage-title">Brief Summary – Self-Check</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Read the short transcript clip below. Write a brief summary containing 3 pieces of advice using modals. Then complete the self-check checklist and submit your evaluation.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Remember: managing balance is ongoing. You might start by writing 3 priorities each morning. Students could also talk to a counselor if stress becomes too great. Taking walks may help reset your mind between study sessions."
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="l5-summary">Write a brief summary with 3 pieces of advice using modals:</label>
+                        <textarea class="writing-textarea" id="l5-summary" style="height:140px;" placeholder="Based on the transcript, you might... Students could... Additionally, they may..."></textarea>
+                    </div>
+                    <div class="evaluation-rubric-card" style="margin-top:1.5rem; margin-bottom: 1.5rem;">
+                        <h5>Self-Check Checklist</h5>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Used 3 modal verbs</span><span class="rubric-desc">could, might, or may appear at least 3 times.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c1"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Referenced audio content</span><span class="rubric-desc">Summary reflects ideas from the clip.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c2"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Complete sentences</span><span class="rubric-desc">Each piece of advice is a full sentence.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c3"></div>
+                    </div>
+
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="l5-student-info">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="l5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="l5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="l5-student-date">Fecha / Date:</label>
+                                <input type="date" id="l5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="l5-student-time">Hora / Time:</label>
+                                <input type="time" id="l5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitListeningEvaluation()">Submit Summary & Self-Check</button>
+
+                    <div class="eval-result-card" id="l5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="l5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="l5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="l5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="l5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 6 -->
+            <div id="listening-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Listening)</span><span class="stage-title">Sticky Note Reflection</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Write your answer on a sticky note: 'What listening strategy helped you most today?' Then read 3 notes from classmates.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label" for="l6-strategy">What listening strategy helped you most today?</label>
+                        <div class="sticky-form">
+                            <input type="text" class="text-input sticky-input" id="l6-strategy" placeholder="e.g. Listening for key words like 'prioritize' helped me follow the interview...">
+                            <button class="btn-nav" style="padding:0.75rem 1.25rem;" onclick="addStickyNote('listening', 'l6-strategy')">Post Note</button>
+                        </div>
+                    </div>
+                    <div class="sticky-wall-container">
+                        <h5>Class Strategy Board</h5>
+                        <div class="sticky-wall" id="listening-sticky-wall">
+                            <div class="sticky-note"><p>"I focused on modal verbs to catch the advice."</p><span class="sticky-author">Student #1</span></div>
+                            <div class="sticky-note"><p>"Noting key words first helped me organize ideas."</p><span class="sticky-author">Student #2</span></div>
+                            <div class="sticky-note"><p>"I visualized the scale to remember the two sides."</p><span class="sticky-author">Student #3</span></div>
+                        </div>
+                    </div>
+                </div>
+                                        <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7PJKPrnVUG4njss65upyemb3NT1pbrkzpuIq1zMGB7n2tzw/viewform" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('listening')">Finish Listening ✓</button>
+                </div>
+            </div>
+
+        </div>
+<!-- end writing -->
+
+    </main>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast-feedback">
+    <span id="toast-icon">💡</span>
+    <span id="toast-message">Feedback!</span>
+</div>
+
+<script src="plan3.js"></script>
+</body>
+</html>

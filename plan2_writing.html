@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 2: Healthy Minds for Healthy Bodies - Interactive English Lesson</title>
+    <link rel="stylesheet" href="plan2.css">
+</head>
+<body data-skill="writing">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" style="display: none;">
+            <div class="brand-section">
+                <span class="brand-title">HabitTech Plan 2</span>
+                <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu" id="skillsMenu">
+                    <li class="nav-item active" data-skill="listening" id="nav-listening">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>🎧</span>
+                                <span>1. Listening Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-listening"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="reading" id="nav-reading">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>📖</span>
+                                <span>2. Reading Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-reading"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>💬</span>
+                                <span>3. Speaking Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-speaking"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-skill="writing" id="nav-writing">
+                        <a class="nav-link" href="#">
+                            <div class="skill-icon-name">
+                                <span>✍️</span>
+                                <span>4. Writing Skill</span>
+                            </div>
+                            <span class="skill-status" id="status-writing"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Topic: Healthy Minds for Healthy Bodies</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem;">
+        <!-- Top Nav Bar with Back Button -->
+        <div class="top-nav-back" style="margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <a href="plan2hub.html" class="back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #475569; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: #ffffff; transition: all 0.2s; font-family: 'Outfit', sans-serif;">&larr; Volver al Men&uacute;</a>
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; background: #f1f5f9; padding: 0.4rem 1rem; border-radius: 20px;">
+                Plan 2
+            </span>
+        </div>
+            <!-- Header Section -->
+            <header class="top-header">
+                <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+                <h1 class="lesson-title">Healthy Minds for Healthy Bodies</h1>
+            </header>
+
+            <!-- Objective & Learning Outcomes Card -->
+            <section class="objectives-card" id="objectivesCard">
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <h4>Specific Objective</h4>
+                        <p id="objectiveText">Students will be able to listen to a discussion about mindfulness practices and interpret key mental health suggestions in pairs during a note-taking and sharing task by the end of the lesson.</p>
+                    </div>
+                    <div class="outcome-item">
+                        <h4>Learning Outcomes</h4>
+                        <ul class="outcome-list" id="outcomesList">
+                            <li>Can demonstrate understanding of extended discussions about health technologies and long-term habits.</li>
+                            <li>Can identify key points in conversations about mental health practices (e.g., "You might need to practice mindfulness to reduce stress.").</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stage Navigation (Stepper) -->
+            <nav class="stage-navigation" id="stageNav">
+                <div class="stage-step active" data-stage="1">
+                    <div class="step-bubble">1</div>
+                    <span class="step-label">Initial Activity</span>
+                </div>
+                <div class="stage-step" data-stage="2">
+                    <div class="step-bubble">2</div>
+                    <span class="step-label">Presentation</span>
+                </div>
+                <div class="stage-step" data-stage="3">
+                    <div class="step-bubble">3</div>
+                    <span class="step-label">Preparation</span>
+                </div>
+                <div class="stage-step" data-stage="4">
+                    <div class="step-bubble">4</div>
+                    <span class="step-label">Execution</span>
+                </div>
+                <div class="stage-step" data-stage="5">
+                    <div class="step-bubble">5</div>
+                    <span class="step-label">Evaluation</span>
+                </div>
+                <div class="stage-step" data-stage="6" id="stepper-stage-6">
+                    <div class="step-bubble">6</div>
+                    <span class="step-label">Reflection</span>
+                </div>
+            </nav>
+
+            <!-- ================= LISTENING SKILL SECTION ================= -->
+            
+<div id="writing-section" class="skill-section">
+                
+                <!-- Writing Stage 1 -->
+                <div id="writing-stage-1" class="stage-container active">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 1 (Writing)</span>
+                            <span class="stage-title">Immediate Health Solutions</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Review the health scenario index cards. Work in pairs to suggest 2 solutions using present perfect continuous.</p>
+                    
+                    <div class="stage-content">
+                        <div class="scenarios-grid">
+                            <div class="scenario-card">
+                                <div class="scenario-title">😴 Sleep Deprivation</div>
+                                <div class="scenario-desc">Lack of sleep, constant late-night screen scrolling.</div>
+                                <input type="text" class="text-input" id="w1-sol1" placeholder="Solution 1...">
+                            </div>
+                            <div class="scenario-card">
+                                <div class="scenario-title">🍕 Poor Nutrition</div>
+                                <div class="scenario-desc">Eating junk foods, skipped breakfasts.</div>
+                                <input type="text" class="text-input" id="w1-sol2" placeholder="Solution 2...">
+                            </div>
+                            <div class="scenario-card">
+                                <div class="scenario-title">🤯 High Stress</div>
+                                <div class="scenario-desc">Anxiety over tests and lack of study routine.</div>
+                                <input type="text" class="text-input" id="w1-sol3" placeholder="Solution 3...">
+                            </div>
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyWritingScenarios()">Check Scenario Tenses</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" disabled>Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Writing Stage 2 -->
+                <div id="writing-stage-2" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 2 (Writing)</span>
+                            <span class="stage-title">Action Plan Layout & Transitions</span>
+                        </div>
+                        <span class="stage-time">20 Min</span>
+                    </div>
+                    <p class="stage-instruction">Examine the plan structure template. Write down 2 transition words you will use to connect your action steps.</p>
+                    
+                    <div class="stage-content">
+                        <div class="journal-mockup-wrapper">
+                            <div class="journal-header">
+                                <span style="font-weight:700;">📋 Action Plan Template Layout</span>
+                            </div>
+                            <table class="sleep-grid-template">
+                                <thead>
+                                    <tr>
+                                        <th>1. Current Habits</th>
+                                        <th>2. Wellness Goals</th>
+                                        <th>3. Action Steps</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"Lately, I have been sleeping late."</td>
+                                        <td>"I hope to improve my focus."</td>
+                                        <td>"First, I could turn off my phone. Second, I might meditate."</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="w2-transitions">Transition words to connect action steps (separated by commas):</label>
+                            <input type="text" class="text-input" id="w2-transitions" placeholder="e.g. First, Additionally, On the other hand...">
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyWritingTransitions()">Check Transitions</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Writing Stage 3 -->
+                <div id="writing-stage-3" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 3 (Writing)</span>
+                            <span class="stage-title">Workshop Topic & Strategies</span>
+                        </div>
+                        <span class="stage-time">18 Min</span>
+                    </div>
+                    <p class="stage-instruction">Select your workshop station guide topic. Brainstorm 3 development strategies for your plan.</p>
+                    
+                    <div class="stage-content">
+                        <h5>Select Station Topic:</h5>
+                        <div class="vocab-badge-container" style="margin-bottom:1.5rem;">
+                            <label class="quiz-option" style="width:200px;"><input type="radio" name="w3-topic" value="nutrition"> Nutrition</label>
+                            <label class="quiz-option" style="width:200px;"><input type="radio" name="w3-topic" value="mental"> Mental Health</label>
+                            <label class="quiz-option" style="width:200px;"><input type="radio" name="w3-topic" value="fitness"> Fitness</label>
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="w3-strat1">Strategy 1:</label>
+                            <input type="text" class="text-input" id="w3-strat1" placeholder="e.g. I will use a meditation app to manage daily stress...">
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="w3-strat2">Strategy 2:</label>
+                            <input type="text" class="text-input" id="w3-strat2" placeholder="e.g. I will maintain a consistent workout schedule...">
+                        </div>
+
+                        <div class="question-item">
+                            <label class="question-label" for="w3-strat3">Strategy 3:</label>
+                            <input type="text" class="text-input" id="w3-strat3" placeholder="e.g. We might disconnect our mobile networks before bed...">
+                        </div>
+                        <button class="btn-check-ans" onclick="verifyWritingStrategies()">Check Strategies</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Writing Stage 4 -->
+                <div id="writing-stage-4" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 4 (Writing)</span>
+                            <span class="stage-title">Action Plan Draft Execution</span>
+                        </div>
+                        <span class="stage-time">22 Min</span>
+                    </div>
+                    <p class="stage-instruction">Draft your collaborative workshop guide poster and action plan. You must use Present Perfect Continuous and modal verbs.</p>
+                    
+                    <div class="stage-content">
+                        <div class="interactive-writing-pad">
+                            <textarea class="writing-textarea" id="w4-paragraph" placeholder="Lately, we have been studying health topics. To improve our wellness, we plan to..." oninput="updateWritingAnalytics()"></textarea>
+                            
+                            <div class="editor-info-bar">
+                                <span class="word-count-badge" id="wordCountText">Words: 0 / 60-80</span>
+                                <div class="validation-tags">
+                                    <span class="validation-badge" id="w4-has-ppc">Present Perfect Continuous</span>
+                                    <span class="validation-badge" id="w4-has-modal">Modal Verbs</span>
+                                    <span class="validation-badge" id="w4-has-maintain">"maintain"</span>
+                                    <span class="validation-badge" id="w4-has-improve">"improve"</span>
+                                    <span class="validation-badge" id="w4-has-manage">"manage"</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-check-ans" onclick="submitWritingActionPlan()">Submit Draft Poster</button>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Writing Stage 5 -->
+                <div id="writing-stage-5" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 5 (Writing)</span>
+                            <span class="stage-title">Rubrics Checklist Evaluation</span>
+                        </div>
+                        <span class="stage-time">24 Min</span>
+                    </div>
+                    <p class="stage-instruction">Assess your final written guide poster drafts against the 5-point rubric checklist.</p>
+                    
+                    <div class="stage-content">
+                        <div class="evaluation-rubric-card">
+                            <h5>Workshop Guide 5-Point Rubric</h5>
+                            
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">1. Grammar Check (PPC Tense)</span>
+                                    <span class="rubric-desc">Used "have been + verb-ing" to express current habits.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="w5-r1">
+                            </div>
+
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">2. Suggestion Check (Modals)</span>
+                                    <span class="rubric-desc">Used "could/might/may" to express suggestions.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="w5-r2">
+                            </div>
+
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">3. Topic Integration</span>
+                                    <span class="rubric-desc">Draft outlined 3 strategies relating to chosen topic.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="w5-r3">
+                            </div>
+
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">4. Transition words usage</span>
+                                    <span class="rubric-desc">Sentences are linked with logic transitions.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="w5-r4">
+                            </div>
+
+                            <div class="rubric-row">
+                                <div class="rubric-info">
+                                    <span class="rubric-name">5. Punctuation & Spelling accuracy</span>
+                                    <span class="rubric-desc">Check for clear spelling and paragraph structures.</span>
+                                </div>
+                                <input type="checkbox" class="rubric-checkbox" id="w5-r5">
+                            </div>
+                        </div>
+                        <!-- Student Registration & Grade Card -->
+                        <div class="eval-student-info" id="w5-student-info">
+                            <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                            <div class="student-info-grid">
+                                <div class="info-field">
+                                    <label for="w5-student-name">Nombre Completo / Full Name:</label>
+                                    <input type="text" id="w5-student-name" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="w5-student-date">Fecha / Date:</label>
+                                    <input type="date" id="w5-student-date" required>
+                                </div>
+                                <div class="info-field">
+                                    <label for="w5-student-time">Hora / Time:</label>
+                                    <input type="time" id="w5-student-time" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-check-ans" onclick="submitWritingEvaluation()">Grade Rubrics Checklist</button>
+
+                        <div class="eval-result-card" id="w5-result-card" style="display:none;">
+                            <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                            <div class="result-body">
+                                <div class="result-row"><strong>Estudiante / Student:</strong> <span id="w5-res-name"></span></div>
+                                <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="w5-res-datetime"></span></div>
+                                <div class="result-row score-display">
+                                    <strong>Calificación / Score:</strong>
+                                    <span class="score-value" id="w5-res-score"></span>
+                                </div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar" id="w5-score-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                    </div>
+                </div>
+
+                <!-- Writing Stage 6 -->
+                <div id="writing-stage-6" class="stage-container">
+                    <div class="stage-header">
+                        <div class="stage-title-info">
+                            <span class="stage-number">Stage 6 (Writing)</span>
+                            <span class="stage-title">Reflective Journal Entry</span>
+                        </div>
+                        <span class="stage-time">16 Min</span>
+                    </div>
+                    <p class="stage-instruction">Write a short journal entry (exactly 2 sentences) reflecting on your writing progression.</p>
+                    
+                    <div class="stage-content">
+                        <div class="question-item">
+                            <label class="question-label" for="w6-reflection">Write 2 sentences reflecting on your health plan writing progress:</label>
+                            <textarea class="writing-textarea" id="w6-reflection" placeholder="e.g. I found it challenging to coordinate present perfect tenses. However, completing the poster helped me structure options..."></textarea>
+                        </div>
+                        <button class="btn-check-ans" onclick="submitWritingJournalReflection()">Post Reflection Entry</button>
+                    </div>
+                    
+                                            <!-- Sección de Evaluación / Evaluation Section -->
+                        <div class="eval-form-container" style="margin-top: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--color-primary, #0284c7); font-size: 1.1rem; font-family: 'Outfit', sans-serif;">📝 Evaluación del Estudiante / Student Evaluation</h4>
+                            <p style="color: var(--text-secondary, #475569); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Por favor, completa la evaluación de esta habilidad en el siguiente enlace antes de finalizar:</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1FxECvOnB0sBTzcxIvJoi_zy-Tl1gR7PLGwc7XANFIxQZvA/viewform" target="_blank" rel="noopener noreferrer" class="btn-check-ans" style="display: inline-block; text-decoration: none; margin-top: 0; padding: 0.75rem 1.5rem; font-size: 0.95rem;">Realizar Evaluación / Start Evaluation ➔</a>
+                        </div>
+                        
+                        <div class="stage-footer">
+                        <button class="btn-secondary" onclick="prevStage()">Back</button>
+                        <button class="btn-nav" onclick="markSkillComplete('writing')">Finish Writing Skill ✓</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- Toast Popup Notifications for Formative Feedback -->
+    <div id="toast" class="toast-feedback">
+        <span id="toast-icon">💡</span>
+        <span id="toast-message">Feedback loaded!</span>
+    </div>
+
+    <script src="plan2.js"></script>
+</body>
+</html>

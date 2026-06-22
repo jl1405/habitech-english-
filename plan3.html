@@ -1,0 +1,980 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 3: How to Balance Social and School Activities</title>
+    <link rel="stylesheet" href="plan3.css">
+</head>
+<body>
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand-section">
+            <span class="brand-title">Balance Plan 3</span>
+            <span class="brand-subtitle">Grade 12 Lesson Plan</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-menu" id="skillsMenu">
+                <li class="nav-item active" data-skill="listening" id="nav-listening">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>🎧</span><span>1. Listening Skill</span></div>
+                        <span class="skill-status" id="status-listening"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="reading" id="nav-reading">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>📖</span><span>2. Reading Skill</span></div>
+                        <span class="skill-status" id="status-reading"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="speaking" id="nav-speaking">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>💬</span><span>3. Speaking Skill</span></div>
+                        <span class="skill-status" id="status-speaking"></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-skill="writing" id="nav-writing">
+                    <a class="nav-link" href="#">
+                        <div class="skill-icon-name"><span>✍️</span><span>4. Writing Skill</span></div>
+                        <span class="skill-status" id="status-writing"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer"><p>Topic: How to Balance Social and School Activities</p></div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <header class="top-header">
+            <div class="lesson-topic" id="currentTopic">Skill Focus: Listening</div>
+            <h1 class="lesson-title">How to Balance Social and School Activities</h1>
+        </header>
+
+        <section class="objectives-card">
+            <div class="objectives-grid">
+                <div class="objective-item">
+                    <h4>Specific Objective</h4>
+                    <p id="objectiveText">Students will be able to listen to an interview about school-life balance and interpret key suggestions for relaxation in pairs during a graphic organizer completion activity.</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Learning Outcomes</h4>
+                    <ul class="outcome-list" id="outcomesList">
+                        <li>Can describe the storyline of an audio or visual narrative about balancing school and personal life.</li>
+                        <li>Can comprehend extended discussions on strategies for learning to relax and maintaining well-being.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEPPER -->
+        <nav class="stage-navigation" id="stageNav">
+            <div class="stage-step active" data-stage="1"><div class="step-bubble">1</div><span class="step-label">Initial Activity</span></div>
+            <div class="stage-step" data-stage="2"><div class="step-bubble">2</div><span class="step-label">Presentation</span></div>
+            <div class="stage-step" data-stage="3"><div class="step-bubble">3</div><span class="step-label">Preparation</span></div>
+            <div class="stage-step" data-stage="4"><div class="step-bubble">4</div><span class="step-label">Execution</span></div>
+            <div class="stage-step" data-stage="5"><div class="step-bubble">5</div><span class="step-label">Evaluation</span></div>
+            <div class="stage-step" data-stage="6"><div class="step-bubble">6</div><span class="step-label">Reflection</span></div>
+        </nav>
+
+        <!-- ========== LISTENING ========== -->
+        <div id="listening-section" class="skill-section active">
+
+            <!-- L Stage 1 -->
+            <div id="listening-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Listening)</span><span class="stage-title">School Stress Sounds</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Click each sound effect card to hear it. List 2 feelings you connect with each sound. Then label the balance scale sides.</p>
+                <div class="stage-content">
+                    <div class="sound-effects-grid">
+                        <div class="sound-card" onclick="playSound('alarm')"><div class="sound-icon">⏰</div><div class="sound-title">Morning Alarm</div></div>
+                        <div class="sound-card" onclick="playSound('typing')"><div class="sound-icon">⌨️</div><div class="sound-title">Typing Homework</div></div>
+                        <div class="sound-card" onclick="playSound('crowd')"><div class="sound-icon">📢</div><div class="sound-title">Noisy Hallway</div></div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="l1-feelings">List 2 feelings these sounds bring to mind:</label>
+                        <input type="text" class="text-input" id="l1-feelings" placeholder="e.g. stressed, overwhelmed...">
+                    </div>
+                    <h5 style="margin-bottom:1rem; margin-top:1.5rem;">Balance Scale: Label the two sides below</h5>
+                    <div class="balance-scale-wrapper">
+                        <div class="scale-side" id="scale-school" onclick="toggleScale('school')">
+                            <span class="scale-icon">📚</span>
+                            <span class="scale-label">School Activities</span>
+                            <span class="scale-desc">Homework, tests, classes</span>
+                        </div>
+                        <div class="scale-beam"><span>⚖️</span><span style="font-size:0.75rem; color:var(--text-muted);">Balance</span></div>
+                        <div class="scale-side" id="scale-social" onclick="toggleScale('social')">
+                            <span class="scale-icon">🎉</span>
+                            <span class="scale-label">Social Activities</span>
+                            <span class="scale-desc">Friends, hobbies, sports</span>
+                        </div>
+                    </div>
+                    <div class="vocab-badge-container">
+                        <span class="vocab-badge" title="Personal time used for rest and leisure away from responsibilities.">🌿 downtime</span>
+                        <span class="vocab-badge" title="To arrange or order activities in order of importance.">📋 prioritize</span>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 2 -->
+            <div id="listening-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Listening)</span><span class="stage-title">Interview: School-Life Balance</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Read the interview transcript segment below. Click on the keywords 'prioritize' and 'stress' in the text to highlight them. Then answer the 3 questions.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Host: Today we are talking about school and social life. How do you manage your time?<br>
+                        Speaker: It has been really challenging. I have been trying to <span class='kw-word' data-word='prioritize' style='cursor:pointer; border-bottom:2px dashed var(--color-primary); padding:0 2px;'>prioritize</span> my tasks, but the <span class='kw-word' data-word='stress' style='cursor:pointer; border-bottom:2px dashed var(--color-primary); padding:0 2px;'>stress</span> builds up. I learned that setting clear downtime helps a lot. You might schedule one afternoon a week just for yourself. That could reduce anxiety significantly."
+                    </div>
+                    <div class="question-item"><label class="question-label" for="l2-q1">1. What has the speaker been trying to do?</label><input type="text" class="text-input" id="l2-q1" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="l2-q2">2. What does the speaker recommend scheduling?</label><input type="text" class="text-input" id="l2-q2" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="l2-q3">3. What could regular downtime reduce?</label><input type="text" class="text-input" id="l2-q3" placeholder="Type answer..."></div>
+                    <button class="btn-check-ans" onclick="checkListeningQuestions()">Check Answers</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 3 -->
+            <div id="listening-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Listening)</span><span class="stage-title">Graphic Organizer – 4 Boxes</span></div>
+                    <span class="stage-time">15 Min</span>
+                </div>
+                <p class="stage-instruction">Read the 4 categories in pairs. Write one simple idea in each box. Underline the modal verbs in the sample sentences below.</p>
+                <div class="stage-content">
+                    <div class="grammar-callout" style="margin-bottom:1.5rem;">
+                        <h5>Sample Sentences with Modals (Underline them mentally):</h5>
+                        <ul class="grammar-samples">
+                            <li>"You <strong>could</strong> schedule one free afternoon each week."</li>
+                            <li>"Students <strong>might</strong> feel less stressed if they plan ahead."</li>
+                            <li>"Taking breaks <strong>may</strong> improve overall productivity."</li>
+                        </ul>
+                    </div>
+                    <div class="four-box-organizer">
+                        <div class="organizer-box"><h5>📚 School Pressures</h5><textarea id="box1" placeholder="e.g. Too many exams at once..."></textarea></div>
+                        <div class="organizer-box"><h5>🎉 Social Needs</h5><textarea id="box2" placeholder="e.g. Friends need quality time..."></textarea></div>
+                        <div class="organizer-box"><h5>💡 Relaxation Strategies</h5><textarea id="box3" placeholder="e.g. Short breathing exercises..."></textarea></div>
+                        <div class="organizer-box"><h5>🎯 Balance Tips</h5><textarea id="box4" placeholder="e.g. Prioritize tasks by deadline..."></textarea></div>
+                    </div>
+                    <button class="btn-check-ans" onclick="checkFourBoxes()">Submit Organizer</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 4 -->
+            <div id="listening-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Listening)</span><span class="stage-title">Full Interview – 4 Tips</span></div>
+                    <span class="stage-time">25 Min</span>
+                </div>
+                <p class="stage-instruction">Read the full interview transcript below. Write 4 tips using modals of possibility. Then summarize the advice in at least 3 sentences.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Full Interview: I have been coaching students for years. Tip one: You could set a weekly planner every Sunday. Tip two: Students might reduce stress by including one social event in their schedule. Tip three: You may want to communicate your needs to teachers early. Tip four: Taking short breaks during study sessions could boost focus. These strategies have helped many students achieve a better balance."
+                    </div>
+                    <h5 style="margin-bottom:1rem;">Write 4 Tips Using Modals (could / might / may):</h5>
+                    <div class="question-item"><label class="question-label" for="l4-tip1">Tip 1:</label><input type="text" class="text-input" id="l4-tip1" placeholder="e.g. You could set a weekly planner..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip2">Tip 2:</label><input type="text" class="text-input" id="l4-tip2" placeholder="e.g. Students might reduce stress by..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip3">Tip 3:</label><input type="text" class="text-input" id="l4-tip3" placeholder="e.g. You may want to communicate..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-tip4">Tip 4:</label><input type="text" class="text-input" id="l4-tip4" placeholder="e.g. Taking short breaks could boost..."></div>
+                    <div class="question-item"><label class="question-label" for="l4-summary">Summary (3+ sentences):</label><textarea class="writing-textarea" id="l4-summary" style="height:120px;" placeholder="Summarize the advice in at least 3 sentences..."></textarea></div>
+                    <button class="btn-check-ans" onclick="checkListeningTips()">Submit Tips & Summary</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 5 -->
+            <div id="listening-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Listening)</span><span class="stage-title">Brief Summary – Self-Check</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Read the short transcript clip below. Write a brief summary containing 3 pieces of advice using modals. Then complete the self-check checklist and submit your evaluation.</p>
+                <div class="stage-content">
+                    <div class="transcript-container" style="display:block; margin-bottom:1.5rem; background:#f8fafc; border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-lg); line-height:1.8; color:var(--text-secondary);">
+                        "Remember: managing balance is ongoing. You might start by writing 3 priorities each morning. Students could also talk to a counselor if stress becomes too great. Taking walks may help reset your mind between study sessions."
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="l5-summary">Write a brief summary with 3 pieces of advice using modals:</label>
+                        <textarea class="writing-textarea" id="l5-summary" style="height:140px;" placeholder="Based on the transcript, you might... Students could... Additionally, they may..."></textarea>
+                    </div>
+                    <div class="evaluation-rubric-card" style="margin-top:1.5rem; margin-bottom: 1.5rem;">
+                        <h5>Self-Check Checklist</h5>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Used 3 modal verbs</span><span class="rubric-desc">could, might, or may appear at least 3 times.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c1"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Referenced audio content</span><span class="rubric-desc">Summary reflects ideas from the clip.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c2"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Complete sentences</span><span class="rubric-desc">Each piece of advice is a full sentence.</span></div><input type="checkbox" class="rubric-checkbox" id="l5-c3"></div>
+                    </div>
+
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="l5-student-info">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="l5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="l5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="l5-student-date">Fecha / Date:</label>
+                                <input type="date" id="l5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="l5-student-time">Hora / Time:</label>
+                                <input type="time" id="l5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitListeningEvaluation()">Submit Summary & Self-Check</button>
+
+                    <div class="eval-result-card" id="l5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="l5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="l5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="l5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="l5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- L Stage 6 -->
+            <div id="listening-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Listening)</span><span class="stage-title">Sticky Note Reflection</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Write your answer on a sticky note: 'What listening strategy helped you most today?' Then read 3 notes from classmates.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label" for="l6-strategy">What listening strategy helped you most today?</label>
+                        <div class="sticky-form">
+                            <input type="text" class="text-input sticky-input" id="l6-strategy" placeholder="e.g. Listening for key words like 'prioritize' helped me follow the interview...">
+                            <button class="btn-nav" style="padding:0.75rem 1.25rem;" onclick="addStickyNote('listening', 'l6-strategy')">Post Note</button>
+                        </div>
+                    </div>
+                    <div class="sticky-wall-container">
+                        <h5>Class Strategy Board</h5>
+                        <div class="sticky-wall" id="listening-sticky-wall">
+                            <div class="sticky-note"><p>"I focused on modal verbs to catch the advice."</p><span class="sticky-author">Student #1</span></div>
+                            <div class="sticky-note"><p>"Noting key words first helped me organize ideas."</p><span class="sticky-author">Student #2</span></div>
+                            <div class="sticky-note"><p>"I visualized the scale to remember the two sides."</p><span class="sticky-author">Student #3</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('listening')">Finish Listening ✓</button>
+                </div>
+            </div>
+
+        </div><!-- end listening -->
+
+        <!-- ========== READING ========== -->
+        <div id="reading-section" class="skill-section">
+
+            <!-- R Stage 1 -->
+            <div id="reading-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Reading)</span><span class="stage-title">Newspaper Headlines</span></div>
+                    <span class="stage-time">12 Min</span>
+                </div>
+                <p class="stage-instruction">Read the 3 newspaper headlines. Select the most relatable one and share 2 opinions with a partner.</p>
+                <div class="stage-content">
+                    <div class="headlines-grid">
+                        <div class="headline-card" id="hl-1" onclick="selectHeadline(1)"><span class="headline-icon">📰</span><span class="headline-text">"Students Struggle to Balance Social Life and Academic Demands"</span></div>
+                        <div class="headline-card" id="hl-2" onclick="selectHeadline(2)"><span class="headline-icon">📰</span><span class="headline-text">"School Stress Reaches Record Highs Among Teenagers"</span></div>
+                        <div class="headline-card" id="hl-3" onclick="selectHeadline(3)"><span class="headline-icon">📰</span><span class="headline-text">"Setting Boundaries: The Key to Student Well-being"</span></div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="r1-opinion1">Opinion 1 – Why do we need boundaries?</label>
+                        <input type="text" class="text-input" id="r1-opinion1" placeholder="e.g. Boundaries help us protect our personal time...">
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="r1-opinion2">Opinion 2 – What happens without boundaries?</label>
+                        <input type="text" class="text-input" id="r1-opinion2" placeholder="e.g. Without boundaries, stress accumulates and health suffers...">
+                    </div>
+                    <div class="grammar-callout" style="background:#f0fdf4; border-color:#bbf7d0;">
+                        <h5>🪢 Key Concept: Boundaries</h5>
+                        <p style="color:var(--text-secondary);">A <strong>boundary</strong> is a limit that separates different areas of life — like keeping school work out of personal time, just like a rope divides two sides of a space.</p>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- R Stage 2 -->
+            <div id="reading-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Reading)</span><span class="stage-title">Editorial: Student Stress & Boundaries</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Read paragraphs 1 and 2 of the editorial. Find the answers to the 3 questions on the board. Click the 2 second conditional sentences.</p>
+                <div class="stage-content">
+                    <div class="editorial-container" style="background:#ffffff; border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:2rem; max-height:320px; overflow-y:auto; margin-bottom:1.5rem; line-height:1.8;">
+                        <h4 style="text-align:center; font-size:1.4rem; margin-bottom:1rem;">Managing Stress: The Importance of Boundaries</h4>
+                        <p style="margin-bottom:1rem; color:var(--text-secondary);">Paragraph 1: High school students today face enormous pressure. Between academic deadlines and social expectations, many feel overwhelmed. Research shows that students who set clear boundaries between school and personal time tend to have lower stress levels. <span class="cond-sentence selectable-word" data-word="cond1" onclick="selectConditional('cond1', this)">If students learned to say no to extra commitments, they would have more energy for essential tasks.</span></p>
+                        <p style="margin-bottom:1rem; color:var(--text-secondary);">Paragraph 2: The solution lies in self-awareness. Students must recognize their personal limits. Creating a weekly schedule that includes downtime is a proven strategy. <span class="cond-sentence selectable-word" data-word="cond2" onclick="selectConditional('cond2', this)">If teenagers managed their screen time better, they could improve their concentration significantly.</span> Schools can support this by teaching time-management skills.</p>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="r2-q1">1. Who tends to have lower stress levels according to the editorial?</label><input type="text" class="text-input" id="r2-q1" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="r2-q2">2. What is described as a proven strategy?</label><input type="text" class="text-input" id="r2-q2" placeholder="Type answer..."></div>
+                    <div class="question-item"><label class="question-label" for="r2-q3">3. How can schools support students?</label><input type="text" class="text-input" id="r2-q3" placeholder="Type answer..."></div>
+                    <button class="btn-check-ans" onclick="checkReadingQuestions()">Check Answers</button>
+                    <div class="grammar-callout">
+                        <h5>Second Conditional Structure (Click the sentences above to highlight them):</h5>
+                        <div class="grammar-formula">If + subject + past simple, subject + would/could + base verb</div>
+                        <ul class="grammar-samples">
+                            <li>"If students <strong>learned</strong> to say no, they <strong>would have</strong> more energy."</li>
+                            <li>"If teenagers <strong>managed</strong> screen time, they <strong>could improve</strong> concentration."</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- R Stage 3 -->
+            <div id="reading-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Reading)</span><span class="stage-title">Jigsaw Reading – Comparative Organizer</span></div>
+                    <span class="stage-time">12 Min</span>
+                </div>
+                <p class="stage-instruction">Each group member reads a different paragraph. Together, fill in the comparative organizer. Write the headings and key arguments.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label">Assign paragraphs to group members:</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r3-para" value="p1"> Member 1 → Paragraph 1 (Stress & Boundaries)</label>
+                            <label class="quiz-option"><input type="radio" name="r3-para" value="p2"> Member 2 → Paragraph 2 (Self-awareness & Schedule)</label>
+                            <label class="quiz-option"><input type="radio" name="r3-para" value="p3"> Member 3 → Paragraph 3 (School Support)</label>
+                        </div>
+                    </div>
+                    <div class="comparative-organizer" style="margin-top:1.5rem;">
+                        <div class="comp-column">
+                            <h5>📌 Key Arguments – Boundaries Help</h5>
+                            <textarea id="r3-col1" placeholder="Write arguments in favour of setting boundaries..."></textarea>
+                        </div>
+                        <div class="comp-column">
+                            <h5>⚠️ Key Arguments – Challenges to Balance</h5>
+                            <textarea id="r3-col2" placeholder="Write arguments about difficulties students face..."></textarea>
+                        </div>
+                    </div>
+                    <button class="btn-check-ans" onclick="checkJigsawOrganizer()">Submit Organizer</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- R Stage 4 -->
+            <div id="reading-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Reading)</span><span class="stage-title">Share Main Ideas – 4 Arguments</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Share your paragraph's main idea with your group. Then write 4 arguments about study boundaries and relaxation in the organizer.</p>
+                <div class="stage-content">
+                    <div class="question-item"><label class="question-label" for="r4-arg1">Argument 1:</label><input type="text" class="text-input" id="r4-arg1" placeholder="e.g. Students with boundaries perform better academically..."></div>
+                    <div class="question-item"><label class="question-label" for="r4-arg2">Argument 2:</label><input type="text" class="text-input" id="r4-arg2" placeholder="e.g. Relaxation reduces cortisol levels and improves focus..."></div>
+                    <div class="question-item"><label class="question-label" for="r4-arg3">Argument 3:</label><input type="text" class="text-input" id="r4-arg3" placeholder="e.g. Schools should teach boundary-setting as a life skill..."></div>
+                    <div class="question-item"><label class="question-label" for="r4-arg4">Argument 4:</label><input type="text" class="text-input" id="r4-arg4" placeholder="e.g. Setting limits on screentime helps restore energy..."></div>
+                    <button class="btn-check-ans" onclick="checkReadingArguments()">Submit Arguments</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- R Stage 5 -->
+            <div id="reading-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Reading)</span><span class="stage-title">Comprehension Quiz & Second Conditional</span></div>
+                    <span class="stage-time">12 Min</span>
+                </div>
+                <p class="stage-instruction">Answer the 5-question comprehension quiz. Then write 2 sentences using the second conditional.</p>
+                <div class="stage-content">
+                    <div class="question-item">
+                        <label class="question-label">1. Students with clear boundaries tend to have:</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r5-q1" value="a"> More friends and activities</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q1" value="b"> Lower stress levels</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q1" value="c"> Higher grades only</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label">2. The second conditional in the editorial suggests:</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r5-q2" value="a"> Certain future events</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q2" value="b"> Hypothetical or imagined situations</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q2" value="c"> Past completed actions</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label">3. What proven strategy is mentioned in paragraph 2?</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r5-q3" value="a"> Joining more clubs</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q3" value="b"> Creating a weekly schedule with downtime</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q3" value="c"> Studying more hours daily</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label">4. What can schools do to support students?</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r5-q4" value="a"> Give fewer assignments</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q4" value="b"> Teach time-management skills</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q4" value="c"> Cancel social events</label>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label">5. What does managing screen time help improve?</label>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="r5-q5" value="a"> Physical strength</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q5" value="b"> Concentration significantly</label>
+                            <label class="quiz-option"><input type="radio" name="r5-q5" value="c"> Social media followers</label>
+                        </div>
+                    </div>
+                    <button class="btn-check-ans" onclick="gradeReadingQuiz()">Grade Quiz</button>
+                    <div style="margin-top:1.5rem;">
+                        <h5 style="margin-bottom:1rem;">Write 2 sentences using the Second Conditional:</h5>
+                        <div class="question-item"><label class="question-label" for="r5-sc1">Sentence 1 (If + past simple, ... would/could...):</label><input type="text" class="text-input" id="r5-sc1" placeholder="e.g. If I organized my schedule, I could reduce my stress..."></div>
+                        <div class="question-item"><label class="question-label" for="r5-sc2">Sentence 2:</label><input type="text" class="text-input" id="r5-sc2" placeholder="e.g. If students slept more, they would perform better..."></div>
+                        <button class="btn-check-ans" onclick="checkSecondConditional()">Check Second Conditional</button>
+                    </div>
+
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="r5-student-info" style="margin-top: 1.5rem;">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="r5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="r5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="r5-student-date">Fecha / Date:</label>
+                                <input type="date" id="r5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="r5-student-time">Hora / Time:</label>
+                                <input type="time" id="r5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="gradeReadingEvaluation()">Submit Reading Evaluation</button>
+
+                    <div class="eval-result-card" id="r5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="r5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="r5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="r5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="r5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- R Stage 6 -->
+            <div id="reading-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Reading)</span><span class="stage-title">Thumbs Up/Down & Challenges</span></div>
+                    <span class="stage-time">8 Min</span>
+                </div>
+                <p class="stage-instruction">Rate your reading comprehension. Then voice your challenges aloud by writing them below.</p>
+                <div class="stage-content">
+                    <div class="thumbs-assessment">
+                        <button class="thumb-btn" id="thumb-up" onclick="selectThumb('up')"><span class="thumb-emoji">👍</span><span class="thumb-label">I understood well</span></button>
+                        <button class="thumb-btn" id="thumb-down" onclick="selectThumb('down')"><span class="thumb-emoji">👎</span><span class="thumb-label">I found it difficult</span></button>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="r6-challenge">What did you find most difficult in this reading? (Voice it aloud, then write it):</label>
+                        <input type="text" class="text-input" id="r6-challenge" placeholder="e.g. Understanding the second conditional structure was challenging...">
+                    </div>
+                    <button class="btn-check-ans" onclick="submitReadingReflection()">Submit Reflection</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('reading')">Finish Reading ✓</button>
+                </div>
+            </div>
+
+        </div><!-- end reading -->
+
+        <!-- ========== SPEAKING ========== -->
+        <div id="speaking-section" class="skill-section">
+
+            <!-- S Stage 1 -->
+            <div id="speaking-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Speaking)</span><span class="stage-title">Chaotic Calendar Activity</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Look at this chaotic weekly calendar. Identify 3 problems. Then complete the sentence: "I have been studying all week." Answer what you have been doing.</p>
+                <div class="stage-content">
+                    <div class="chaotic-calendar">
+                        <div class="calendar-title">⚠️ Weekly Calendar – Overloaded!</div>
+                        <div class="calendar-items">
+                            <div class="calendar-item"><span class="calendar-time">Mon 7AM</span><span>Math exam + Football practice + Club meeting</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Tue 6AM</span><span>History project due + Science lab + Tutoring session</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Wed 7PM</span><span>Group presentation + Volunteering shift + Essay draft</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Thu 8AM</span><span>English quiz + Art contest + Parent meeting</span></div>
+                            <div class="calendar-item"><span class="calendar-time">Fri ALL DAY</span><span>3 exams + Football tournament + Part-time job</span></div>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <label class="question-label" for="s1-problems">Identify 3 problems with this schedule:</label>
+                        <textarea class="writing-textarea" id="s1-problems" style="height:100px;" placeholder="Problem 1: Too many events on Monday... Problem 2: ..."></textarea>
+                    </div>
+                    <div class="grammar-callout">
+                        <h5>Practice Sentence (Say it aloud):</h5>
+                        <div class="grammar-formula">"I have been studying all week."</div>
+                        <p style="margin-top:0.5rem; color:var(--text-secondary);">Now answer: "What have you been doing?" with 2 activities.</p>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s1-activities">My 2 activities this week (using have been + verb-ing):</label><input type="text" class="text-input" id="s1-activities" placeholder="I have been preparing for my math exam. I have been attending football practice."></div>
+                    <button class="btn-check-ans" onclick="checkSpeakingStage1()">Check Sentences</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 2 -->
+            <div id="speaking-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Speaking)</span><span class="stage-title">Model Dialogue – PPC</span></div>
+                    <span class="stage-time">20 Min</span>
+                </div>
+                <p class="stage-instruction">Listen and read the model dialogue. Identify 2 examples of Present Perfect Continuous. Practice reading chorally in pairs.</p>
+                <div class="stage-content">
+                    <div class="dialogue-card">
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student A:</span><span class="dialogue-text">Hey, you look tired. What <strong>have you been doing</strong> lately?</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student B:</span><span class="dialogue-text">I know! I <strong>have been trying</strong> to balance football and my exams. It's really exhausting.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student A:</span><span class="dialogue-text">I understand. You might want to set aside one free afternoon each week. That could really help.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Student B:</span><span class="dialogue-text">That sounds useful. I'll give it a try!</span></div>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s2-ppc1">Example 1 of Present Perfect Continuous from the dialogue:</label><input type="text" class="text-input" id="s2-ppc1" placeholder="e.g. have you been doing..."></div>
+                    <div class="question-item"><label class="question-label" for="s2-ppc2">Example 2 of Present Perfect Continuous from the dialogue:</label><input type="text" class="text-input" id="s2-ppc2" placeholder="e.g. have been trying..."></div>
+                    <button class="btn-check-ans" onclick="checkDialoguePPC()">Check Examples</button>
+                    <div class="grammar-callout" style="margin-top:1.5rem;">
+                        <h5>Phrases for Giving Suggestions:</h5>
+                        <ul class="grammar-samples">
+                            <li>"You <strong>might want to</strong>..."</li>
+                            <li>"That <strong>could</strong> really help."</li>
+                            <li>"Have you considered...?"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 3 -->
+            <div id="speaking-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Speaking)</span><span class="stage-title">Schedule Template & 3 Questions</span></div>
+                    <span class="stage-time">15 Min</span>
+                </div>
+                <p class="stage-instruction">Fill in your actual weekly commitments in the schedule. Then draft 3 questions using Present Perfect Continuous to ask your partner.</p>
+                <div class="stage-content">
+                    <h5 style="margin-bottom:1rem;">My Weekly Schedule (5 Time Slots):</h5>
+                    <table class="schedule-grid">
+                        <thead><tr><th>Time Slot</th><th>Activity</th><th>Hours/Week</th></tr></thead>
+                        <tbody>
+                            <tr><td>Morning (Mon-Fri)</td><td><input type="text" id="sch-1" placeholder="e.g. School classes..."></td><td><input type="text" id="sch-1h" placeholder="e.g. 5h"></td></tr>
+                            <tr><td>Afternoon</td><td><input type="text" id="sch-2" placeholder="e.g. Sports practice..."></td><td><input type="text" id="sch-2h" placeholder="e.g. 3h"></td></tr>
+                            <tr><td>Evening</td><td><input type="text" id="sch-3" placeholder="e.g. Homework time..."></td><td><input type="text" id="sch-3h" placeholder="e.g. 2h"></td></tr>
+                            <tr><td>Weekend Morning</td><td><input type="text" id="sch-4" placeholder="e.g. Volunteering..."></td><td><input type="text" id="sch-4h" placeholder="e.g. 4h"></td></tr>
+                            <tr><td>Weekend Afternoon</td><td><input type="text" id="sch-5" placeholder="e.g. Leisure/Family time..."></td><td><input type="text" id="sch-5h" placeholder="e.g. 3h"></td></tr>
+                        </tbody>
+                    </table>
+                    <h5 style="margin-top:1.5rem; margin-bottom:1rem;">Draft 3 PPC Questions to ask your partner:</h5>
+                    <div class="question-item"><label class="question-label" for="s3-q1">Question 1 (How long have you been...?):</label><input type="text" class="text-input" id="s3-q1" placeholder="e.g. How long have you been attending football practice?"></div>
+                    <div class="question-item"><label class="question-label" for="s3-q2">Question 2 (What have you been...?):</label><input type="text" class="text-input" id="s3-q2" placeholder="e.g. What have you been doing on weekends lately?"></div>
+                    <div class="question-item"><label class="question-label" for="s3-q3">Question 3 (Have you been...?):</label><input type="text" class="text-input" id="s3-q3" placeholder="e.g. Have you been feeling stressed this week?"></div>
+                    <button class="btn-check-ans" onclick="checkSpeakingQuestions()">Check Questions</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 4 -->
+            <div id="speaking-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Speaking)</span><span class="stage-title">Pair Interview – Record Responses</span></div>
+                    <span class="stage-time">25 Min</span>
+                </div>
+                <p class="stage-instruction">Interview your partner for 5 minutes about their ongoing schedule. Record their responses below using Present Perfect Continuous.</p>
+                <div class="stage-content">
+                    <div class="dialogue-card" style="margin-bottom:1.5rem;">
+                        <div class="dialogue-line"><span class="dialogue-speaker">You:</span><span class="dialogue-text">Use your 3 prepared questions from Stage 3.</span></div>
+                        <div class="dialogue-line"><span class="dialogue-speaker">Partner:</span><span class="dialogue-text">Answers using Present Perfect Continuous.</span></div>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="s4-r1">Partner's response to Question 1:</label><input type="text" class="text-input" id="s4-r1" placeholder="e.g. I have been attending practice for 3 years..."></div>
+                    <div class="question-item"><label class="question-label" for="s4-r2">Partner's response to Question 2:</label><input type="text" class="text-input" id="s4-r2" placeholder="e.g. I have been spending weekends with my family..."></div>
+                    <div class="question-item"><label class="question-label" for="s4-r3">Partner's response to Question 3:</label><input type="text" class="text-input" id="s4-r3" placeholder="e.g. Yes, I have been feeling quite overwhelmed..."></div>
+                    <div class="question-item">
+                        <label class="question-label" for="s4-share">Share your partner's schedule summary (using Present Perfect Continuous):</label>
+                        <textarea class="writing-textarea" id="s4-share" style="height:100px;" placeholder="My partner has been attending... They have been managing... Recently, they have been feeling..."></textarea>
+                    </div>
+                    <button class="btn-check-ans" onclick="checkSpeakingInterview()">Check PPC Usage</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 5 -->
+            <div id="speaking-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Speaking)</span><span class="stage-title">Peer-Feedback Session</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Partners rate each other using the simple peer-feedback checklist. Submit your completed checklist.</p>
+                <div class="stage-content">
+                    <div class="evaluation-rubric-card">
+                        <h5>Peer-Feedback Checklist (3 Criteria)</h5>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">1. Grammar – Present Perfect Continuous</span><span class="rubric-desc">Partner used "have/has been + verb-ing" correctly.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c1"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">2. Fluency</span><span class="rubric-desc">Partner spoke clearly without long pauses.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c2"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">3. Suggestion Phrases</span><span class="rubric-desc">Partner used "you might / could" when giving advice.</span></div><input type="checkbox" class="rubric-checkbox" id="s5-c3"></div>
+                    </div>
+                    <div class="question-item" style="margin-top:1.5rem;"><label class="question-label" for="s5-feedback">Additional feedback comment:</label><input type="text" class="text-input" id="s5-feedback" placeholder="e.g. Your pronunciation of 'prioritize' was excellent..."></div>
+                    
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="s5-student-info" style="margin-top: 1.5rem;">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="s5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="s5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="s5-student-date">Fecha / Date:</label>
+                                <input type="date" id="s5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="s5-student-time">Hora / Time:</label>
+                                <input type="time" id="s5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitSpeakingChecklist()">Submit Checklist</button>
+
+                    <div class="eval-result-card" id="s5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="s5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="s5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="s5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="s5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- S Stage 6 -->
+            <div id="speaking-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Speaking)</span><span class="stage-title">Reflection – Fluency Challenge</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Answer: 'What was the most challenging part of speaking today?' Suggest 2 ways to improve your fluency.</p>
+                <div class="stage-content">
+                    <div class="question-item"><label class="question-label" for="s6-challenge">What was the most challenging part of speaking today?</label><input type="text" class="text-input" id="s6-challenge" placeholder="e.g. Forming PPC questions quickly was the hardest part..."></div>
+                    <div class="question-item"><label class="question-label" for="s6-improve1">Way 1 to improve fluency:</label><input type="text" class="text-input" id="s6-improve1" placeholder="e.g. Practice speaking PPC sentences at home daily..."></div>
+                    <div class="question-item"><label class="question-label" for="s6-improve2">Way 2 to improve fluency:</label><input type="text" class="text-input" id="s6-improve2" placeholder="e.g. Record myself and listen for hesitations..."></div>
+                    <button class="btn-check-ans" onclick="submitSpeakingReflection()">Post Reflection</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('speaking')">Finish Speaking ✓</button>
+                </div>
+            </div>
+
+        </div><!-- end speaking -->
+
+        <!-- ========== WRITING ========== -->
+        <div id="writing-section" class="skill-section">
+
+            <!-- W Stage 1 -->
+            <div id="writing-stage-1" class="stage-container active">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 1 (Writing)</span><span class="stage-title">Compare Digital Infographics</span></div>
+                    <span class="stage-time">17 Min</span>
+                </div>
+                <p class="stage-instruction">Compare the 2 sample digital infographics. Write 2 key attractive features. Then write a sample sentence using a modal verb.</p>
+                <div class="stage-content">
+                    <div class="infographic-grid">
+                        <div class="infographic-card" id="info-a" onclick="selectInfog('a')">
+                            <div class="infographic-icon">📊</div>
+                            <div class="infographic-title">Infographic A – Data Heavy</div>
+                            <div class="infographic-desc">Charts, statistics, numbered lists. Short sentences. Dense text layout.</div>
+                        </div>
+                        <div class="infographic-card" id="info-b" onclick="selectInfog('b')">
+                            <div class="infographic-icon">🎨</div>
+                            <div class="infographic-title">Infographic B – Visual Story</div>
+                            <div class="infographic-desc">Icons, colors, brief captions. Clear headline. White space used well.</div>
+                        </div>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="w1-feat1">Key Feature 1 (What makes it attractive?):</label><input type="text" class="text-input" id="w1-feat1" placeholder="e.g. Clear visual hierarchy with bold headlines..."></div>
+                    <div class="question-item"><label class="question-label" for="w1-feat2">Key Feature 2:</label><input type="text" class="text-input" id="w1-feat2" placeholder="e.g. Short bullet points are easy to scan quickly..."></div>
+                    <div class="question-item"><label class="question-label" for="w1-modal">Sample sentence using a modal verb:</label><input type="text" class="text-input" id="w1-modal" placeholder="e.g. Students could use icons to make their infographic more appealing..."></div>
+                    <button class="btn-check-ans" onclick="checkWritingStage1()">Check Features & Modal</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" disabled>Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 2 -->
+            <div id="writing-stage-2" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 2 (Writing)</span><span class="stage-title">Infographic Structure & Second Conditional</span></div>
+                    <span class="stage-time">23 Min</span>
+                </div>
+                <p class="stage-instruction">Label the parts of an infographic structure. Circle the condition and underline the result in the 3 second conditional sentences.</p>
+                <div class="stage-content">
+                    <div class="journal-mockup-wrapper" style="background:#ffffff; border:1px solid var(--border-color); border-radius:var(--radius-lg); overflow:hidden; margin-bottom:1.5rem;">
+                        <div style="background:#f0fdf4; padding:1rem 1.5rem; border-bottom:1px solid var(--border-color); font-weight:700; color:var(--color-primary-hover);">📐 Infographic Structure Diagram</div>
+                        <div style="padding:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                            <div style="background:#f8faf8; border:1px dashed var(--border-color); padding:1rem; border-radius:var(--radius-md); text-align:center;"><strong>HEADLINE</strong><br><span style="font-size:0.8rem; color:var(--text-muted);">Main topic title</span></div>
+                            <div style="background:#f8faf8; border:1px dashed var(--border-color); padding:1rem; border-radius:var(--radius-md); text-align:center;"><strong>VISUAL ELEMENTS</strong><br><span style="font-size:0.8rem; color:var(--text-muted);">Icons, images, charts</span></div>
+                            <div style="background:#f8faf8; border:1px dashed var(--border-color); padding:1rem; border-radius:var(--radius-md); text-align:center; grid-column:1/-1;"><strong>BODY COPY</strong><br><span style="font-size:0.8rem; color:var(--text-muted);">3–5 caption blocks with key tips</span></div>
+                        </div>
+                    </div>
+                    <div class="grammar-callout">
+                        <h5>Identify: Circle the CONDITION, Underline the RESULT</h5>
+                        <ol class="grammar-samples" style="margin-top:0.75rem;">
+                            <li style="margin-bottom:0.75rem;">"<em>If students planned their weeks in advance</em>, <u>they would feel less overwhelmed</u>."</li>
+                            <li style="margin-bottom:0.75rem;">"<em>If you took regular breaks</em>, <u>your concentration could improve significantly</u>."</li>
+                            <li style="margin-bottom:0.75rem;">"<em>If teenagers limited their screen time</em>, <u>they might sleep better</u>."</li>
+                        </ol>
+                    </div>
+                    <div class="question-item"><label class="question-label" for="w2-sc">Write your own second conditional sentence about school-life balance:</label><input type="text" class="text-input" id="w2-sc" placeholder="e.g. If I managed my time better, I could enjoy more social activities..."></div>
+                    <button class="btn-check-ans" onclick="checkWritingSecondConditional()">Check Second Conditional</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 3 -->
+            <div id="writing-stage-3" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 3 (Writing)</span><span class="stage-title">Collaborative Group Roles & 5 Tips</span></div>
+                    <span class="stage-time">15 Min</span>
+                </div>
+                <p class="stage-instruction">Assign roles in your group. Brainstorm 5 tips for school-life balance. Use the sentence frames provided.</p>
+                <div class="stage-content">
+                    <div class="roles-grid">
+                        <div class="role-badge" id="role-scribe" onclick="selectRole('scribe')"><div class="role-icon">📝</div><div class="role-name">Scribe</div><div class="role-desc">Writes all ideas</div></div>
+                        <div class="role-badge" id="role-designer" onclick="selectRole('designer')"><div class="role-icon">🎨</div><div class="role-name">Designer</div><div class="role-desc">Plans visual layout</div></div>
+                        <div class="role-badge" id="role-researcher" onclick="selectRole('researcher')"><div class="role-icon">🔍</div><div class="role-name">Researcher</div><div class="role-desc">Finds key arguments</div></div>
+                    </div>
+                    <div class="sentence-frames" style="margin-bottom:1.5rem;">
+                        <h5 style="margin-bottom:0.5rem;">Sentence Frames for Writing Advice:</h5>
+                        <p>• "If you [past simple], you would/could [result]..."</p>
+                        <p>• "Students might [base verb] if they..."</p>
+                        <p>• "One way to balance activities would be to..."</p>
+                    </div>
+                    <h5 style="margin-bottom:1rem;">5 Tips for School-Life Balance:</h5>
+                    <div class="question-item"><label class="question-label" for="w3-tip1">Tip 1:</label><input type="text" class="text-input" id="w3-tip1" placeholder="e.g. If you planned one free afternoon, you could recharge..."></div>
+                    <div class="question-item"><label class="question-label" for="w3-tip2">Tip 2:</label><input type="text" class="text-input" id="w3-tip2" placeholder="e.g. Students might feel better if they communicated their needs..."></div>
+                    <div class="question-item"><label class="question-label" for="w3-tip3">Tip 3:</label><input type="text" class="text-input" id="w3-tip3" placeholder="e.g. One way to balance would be to limit social media to 1 hour..."></div>
+                    <div class="question-item"><label class="question-label" for="w3-tip4">Tip 4:</label><input type="text" class="text-input" id="w3-tip4" placeholder="e.g. If you slept 8 hours, your memory would improve..."></div>
+                    <div class="question-item"><label class="question-label" for="w3-tip5">Tip 5:</label><input type="text" class="text-input" id="w3-tip5" placeholder="e.g. You could use a planner app to track your commitments..."></div>
+                    <button class="btn-check-ans" onclick="checkWritingTips()">Submit Tips</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 4 -->
+            <div id="writing-stage-4" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 4 (Writing)</span><span class="stage-title">Draft 3 Caption Blocks</span></div>
+                    <span class="stage-time">25 Min</span>
+                </div>
+                <p class="stage-instruction">Write your 3 caption blocks for the infographic using second conditional and modal verbs. Revise your sentences and finalize the draft.</p>
+                <div class="stage-content">
+                    <div class="interactive-writing-pad">
+                        <textarea class="writing-textarea" id="w4-draft" style="height:220px;" placeholder="Caption 1: If students organized their time, they could reduce stress significantly.&#10;Caption 2: Taking short breaks might improve focus during long study sessions.&#10;Caption 3: If teenagers managed screen time, they would sleep better and feel more energized." oninput="updateWritingBadges()"></textarea>
+                        <div class="editor-info-bar">
+                            <span class="word-count-badge" id="w4-wordcount">Words: 0</span>
+                            <div class="validation-tags">
+                                <span class="validation-badge" id="badge-second-cond">Second Conditional</span>
+                                <span class="validation-badge" id="badge-modal">Modal Verbs</span>
+                                <span class="validation-badge" id="badge-if">If-clause</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-check-ans" onclick="submitWritingDraft()">Submit Draft Captions</button>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 5 -->
+            <div id="writing-stage-5" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 5 (Writing)</span><span class="stage-title">Peer-Editing & Final Paragraph</span></div>
+                    <span class="stage-time">24 Min</span>
+                </div>
+                <p class="stage-instruction">Evaluate another group's draft using the peer-editing rubric. Then write your revised final paragraph based on the feedback.</p>
+                <div class="stage-content">
+                    <div class="evaluation-rubric-card">
+                        <h5>Peer-Editing Rubric</h5>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Spelling & Punctuation</span><span class="rubric-desc">Text is free of major spelling and punctuation errors.</span></div><input type="checkbox" class="rubric-checkbox" id="w5-c1"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Grammar – Second Conditional</span><span class="rubric-desc">If + past simple, ... would/could used correctly.</span></div><input type="checkbox" class="rubric-checkbox" id="w5-c2"></div>
+                        <div class="rubric-row"><div class="rubric-info"><span class="rubric-name">Vocabulary</span><span class="rubric-desc">Uses topic words: balance, boundaries, downtime, prioritize.</span></div><input type="checkbox" class="rubric-checkbox" id="w5-c3"></div>
+                    </div>
+                    <div class="question-item" style="margin-top:1.5rem;">
+                        <label class="question-label" for="w5-revised">Write your revised final paragraph based on peer feedback:</label>
+                        <textarea class="writing-textarea" id="w5-revised" style="height:140px;" placeholder="Write the improved version of your caption blocks here..."></textarea>
+                    </div>
+
+                    <!-- Student Registration & Grade Card -->
+                    <div class="eval-student-info" id="w5-student-info" style="margin-top: 1.5rem;">
+                        <h5>📋 Registro del Estudiante / Student Registration:</h5>
+                        <div class="student-info-grid">
+                            <div class="info-field">
+                                <label for="w5-student-name">Nombre Completo / Full Name:</label>
+                                <input type="text" id="w5-student-name" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="w5-student-date">Fecha / Date:</label>
+                                <input type="date" id="w5-student-date" required>
+                            </div>
+                            <div class="info-field">
+                                <label for="w5-student-time">Hora / Time:</label>
+                                <input type="time" id="w5-student-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check-ans" style="margin-top:1rem;" onclick="submitPeerEditing()">Submit Peer Editing & Final Draft</button>
+
+                    <div class="eval-result-card" id="w5-result-card" style="display:none;">
+                        <div class="result-header">✅ Evaluación Enviada / Evaluation Submitted</div>
+                        <div class="result-body">
+                            <div class="result-row"><strong>Estudiante / Student:</strong> <span id="w5-res-name"></span></div>
+                            <div class="result-row"><strong>Fecha y Hora / Date & Time:</strong> <span id="w5-res-datetime"></span></div>
+                            <div class="result-row score-display">
+                                <strong>Calificación / Score:</strong>
+                                <span class="score-value" id="w5-res-score"></span>
+                            </div>
+                            <div class="score-bar-container">
+                                <div class="score-bar" id="w5-score-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="nextStage()">Next Stage ➔</button>
+                </div>
+            </div>
+
+            <!-- W Stage 6 -->
+            <div id="writing-stage-6" class="stage-container">
+                <div class="stage-header">
+                    <div class="stage-title-info"><span class="stage-number">Stage 6 (Writing)</span><span class="stage-title">Reflection Circle</span></div>
+                    <span class="stage-time">16 Min</span>
+                </div>
+                <p class="stage-instruction">Share 1 thing you improved in your draft today. Write a commitment to adjust your work going forward.</p>
+                <div class="stage-content">
+                    <div class="question-item"><label class="question-label" for="w6-improved">1 thing I improved in my draft today:</label><input type="text" class="text-input" id="w6-improved" placeholder="e.g. I improved my use of second conditional by adding the result clause..."></div>
+                    <div class="question-item"><label class="question-label" for="w6-commitment">My commitment to adjust my writing:</label><textarea class="writing-textarea" id="w6-commitment" style="height:120px;" placeholder="e.g. From now on, I will always check that my conditional sentences include both the 'if' clause and the result clause before submitting..."></textarea></div>
+                    <button class="btn-check-ans" onclick="submitWritingReflection()">Post Reflection</button>
+                    <div class="sticky-wall-container" style="margin-top:1.5rem;">
+                        <h5>Class Commitments Board</h5>
+                        <div class="sticky-wall" id="writing-sticky-wall">
+                            <div class="sticky-note"><p>"I will revise grammar before submitting any draft."</p><span class="sticky-author">Student #1</span></div>
+                            <div class="sticky-note"><p>"I'll use a planner to balance writing tasks."</p><span class="sticky-author">Student #2</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-footer">
+                    <button class="btn-secondary" onclick="prevStage()">Back</button>
+                    <button class="btn-nav" onclick="markSkillComplete('writing')">Finish Writing ✓</button>
+                </div>
+            </div>
+
+        </div><!-- end writing -->
+
+    </main>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast-feedback">
+    <span id="toast-icon">💡</span>
+    <span id="toast-message">Feedback!</span>
+</div>
+
+<script src="plan3.js"></script>
+</body>
+</html>
